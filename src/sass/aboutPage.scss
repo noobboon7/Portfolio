@@ -1,0 +1,51 @@
+.sidenav {
+  display: grid;
+  // opacity: .5;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: relative; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+
+  padding-top: 20px;
+
+  h2 {
+    font-size-adjust: auto;
+    color: #fff;
+  }
+
+  .picture-icon {
+    background: #ddd;
+    border-radius: 50%;
+    height: 125px;
+    width: 140px;
+  }
+
+
+  .icon-contanier {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    .twitter-i {
+      height: 20px;
+      width: 20px;
+
+    }
+    .linkedIn-icon {
+      height: 60px;
+      width: 60px;
+
+    }
+
+    .github-icon {
+      height: 20px;
+      width: 20px;
+
+    }
+  }
+}

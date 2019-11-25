@@ -10,6 +10,8 @@
 }
 
 .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   margin: 0;
@@ -30,6 +32,6 @@
   color: #333333;
 }
 
-.link{
+.link {
   color: #999999;
 }
