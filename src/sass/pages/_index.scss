@@ -1,0 +1,32 @@
+ .container {
+     display: grid;
+     grid-template-rows: repeat(2, 1fr);
+
+ }
+ 
+ .splash {
+    height: 90vh;
+    // background-image: linear-gradient(
+    //     to right bottom,
+    //     rgba($color-primary, 0.8),
+    //     rgba($color-dark, 0.9)),
+    // url("../images/blub2.jpg");
+    // background-size: cover;
+    // background-position: top;
+    // position: relative;
+
+    //  background-image: linear-gradient( url("../images/blub2.jpg"));
+
+    //  width: 100%;
+
+
+     &__text {
+        display: grid;
+        text-transform: uppercase;
+        align-items: center;
+        justify-items: center;
+        font-size: 6rem;
+        color: $color-grey-light;
+        text-align: center;
+     }
+ }

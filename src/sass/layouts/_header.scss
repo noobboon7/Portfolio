@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.4rem;
+    height: 3rem;
+    background-color: transparent;
+
+    &__link {
+        display: flex;
+        
+        padding: 0 1rem;
+        text-transform: uppercase;
+        background-image: none;
+        text-decoration: none;
+        font-size: 2rem;
+        color: $color-dark;
+        translate: all .2s;
+    }
+
+    &__link:hover,
+    &__link:active {
+        background-color: rgba($color-primary, .3);
+        transform: translateY(-3px);
+    }
+    
+    &__logo {
+        background-image: none;
+        height: 100%;
+        width: 100%;
+    }
+}
+.links {
+    display: flex;
+
+    margin-left: auto;
+}
