@@ -8,16 +8,17 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 // seperate module ?
 extend({OrbitControls})
 
-const DarkSideMoon = () => {
+const Moon = () => {
     const [model, setModel] = useState()
 
     useEffect(() => {
-        new GLTFLoader().load("../../public/static/truth_about_the_dark_side_of_the_moon/scene.gltf", setModel)
+        new GLTFLoader().load('/scene.gltf', setModel)
+
     },[])
-    
-    console.log(model)
-    // return model ? <primative object={model.scene}/> : null
-    return null
+    // console.log(model)
+    return model ? <mesh scale={[0.07,0.07,0.1]} position={[-5,5,1]} ><primitive object={model.scene}/> </mesh> : null
+   
+    // return null
 }
 
 const Controls = () => {
@@ -38,9 +39,10 @@ const Controls = () => {
 }
 
 const Plane = () => (
-    <mesh rotation={[-Math.PI / 2,0,0]} position={[0, -0.7, 0]} receiveShadow >
+    // if you want plane to rotate rotation={[-Math.PI / 2,0,0]}
+    <mesh  rotation={[-Math.PI / 2,0,0]} position={[0, -0.7, 0]} receiveShadow >
         <planeBufferGeometry attach="geometry" args={[100,100]} />
-        <meshPhysicalMaterial attach="material" color="white" />
+        <meshPhysicalMaterial attach="material" color="grey" />
     </mesh>
 )
 
@@ -82,7 +84,7 @@ const Splash = () => {
         }}>
             <fog attach="fog" args={["white", 5 , 15]} />
             <Controls/>
-            <DarkSideMoon/>
+            <Moon/>
             <Box/>
             <Plane/>
         </Canvas>
