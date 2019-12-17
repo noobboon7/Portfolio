@@ -17,10 +17,13 @@ const IndexPage = () => {
       <Head pageTitle="Home"/>
       <SEO title="Home" />
       <main id ="container" className="contanier">
-      <div className="splash">
+      <section className="splash">
         <Splash/>
-        <h1 className="splash splash__text"> Hi. I'm Jerry Vee. Welcome to my portfolio.</h1>
-      </div>
+        <h1 className="splash splash__text"> Hey. I'm Jerry V. this is my site.</h1>
+      </section>
+      <section className="summary">
+
+      </section>
 
 
 

@@ -1,3 +1,5 @@
+
+
 ```javascript
 const Box = () => {
 
@@ -22,5 +24,12 @@ const Box = () => {
         </a.mesh>
     )
 
+const Plane = () => (
+    // if you want plane to rotate rotation={[-Math.PI / 2,0,0]}
+    <mesh  rotation={[-Math.PI / 2,0,0]} position={[0, -10, 0]} receiveShadow >
+        <planeBufferGeometry attach="geometry" args={[500,500]} />
+        <meshPhysicalMaterial attach="material" color="transparent" />
+    </mesh>
+)
 }
 ```

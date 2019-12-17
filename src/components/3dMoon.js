@@ -8,7 +8,7 @@ const Moon = () => {
     useEffect(() => {
         new GLTFLoader().load('/scene.gltf', setModel)
 
-    },[])
+    },[setModel])
 
 
     return model ? <mesh scale={[0.2,0.2,0.2]} position={[0,0,0]} >
