@@ -1,24 +1,29 @@
 .layout { 
     display: grid;
-    grid-template-rows:  [head-start] minmax(6rem, max-content) [head-end body-start] 1fr [body-end footer-str] minmax(6rem, max-content)[footer-end];
-    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-rows:  [head-start] minmax(6rem, max-content) [head-end body-start] 1fr [body-end footer-start] minmax(6rem, max-content)[footer-end];
 }
 
 .header {
     display: grid;
-    grid-column: sidebar-start / full-end;
+    z-index: 1;
     grid-row: head-start / head-end ;
+    // grid-column: sidebar-start / full-end;
+    // background-color: transparent;
+    
 }
 
 .contanier {
-    display: grid;
-    grid-column: sidebar-start / full-end;
     grid-row: body-start / body-end ;
-    
+   
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    // justify-content: stretch;
+    // align-content: stretch;	
 }
 
 .footer {
     display: grid;
     grid-row: footer-start / footer-end;
-    grid-column: sidebar-start / full-end;
+    // grid-column: sidebar-start / full-end;
 }
