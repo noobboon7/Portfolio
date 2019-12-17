@@ -19,7 +19,6 @@ const IndexPage = () => {
       <main id ="container" className="contanier">
       <div className="splash">
         <Splash/>
-        {/* <Canvas/> */}
         <h1 className="splash splash__text"> Hi. I'm Jerry Vee. Welcome to my portfolio.</h1>
       </div>
 
