@@ -13,10 +13,8 @@ const Layout = (props) => {
 
   return (
     <div className = "layout">
-      <Header siteTitle={title}/>
-      <main>
-        {props.children}
-      </main>
+      {/* <Header siteTitle={title}/> */}
+      {props.children}
       <Footer/>
     </div>
   )

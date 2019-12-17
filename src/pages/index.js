@@ -19,7 +19,7 @@ const IndexPage = () => {
       <main id ="container" className="contanier">
       <section className="splash">
         <Splash/>
-        <h1 className="splash splash__text"> Hey. I'm Jerry V. this is my site.</h1>
+        <h1 className="splash__text"> Hey. I'm Jerry V. this is my site.</h1>
       </section>
       <section className="summary">
 
@@ -27,9 +27,9 @@ const IndexPage = () => {
 
 
 
-      <div className="blogs">
+      {/* <div className="blogs">
 
-      </div>
+      </div> */}
       </main>
 
     </Layout>
