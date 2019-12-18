@@ -17,6 +17,13 @@ const Contact = () => {
         <Layout>
             <Head pageTitle="Contact"/>
             <SEO title="Contact"/>
+            <div>
+                <h1>Contact Me</h1>
+                <p>
+                    Contact me through twitter use some sort of e-mailing and possible web-sockects
+                    <a href="https://twitter.com/JvScripts_" target ='_blank' rel="noopener noreferrer" >@JvScipts</a>
+                </p>
+            </div>
             
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input

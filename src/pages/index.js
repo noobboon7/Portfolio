@@ -1,16 +1,14 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
 // import Canvas from '../components/canvas'
 import Splash from '../components/splash'
-
+import Layout from "../components/layout"
+import Head from '../components/head'
+import SEO from "../components/seo"
+import Icon from '../components/icon'
 
 import "../sass/main.scss"
 
-import Layout from "../components/layout"
-// import Image from "../components/image"
-import Head from '../components/head'
-import SEO from "../components/seo"
 
 const IndexPage = () => {
 
@@ -24,13 +22,15 @@ const IndexPage = () => {
         <section className="splash">
           <h1 className="splash__text"> Hello worlds. I'm Jerry V. this is my site.</h1>
           <Splash/>
+
         </section>
         
         <section className="summary">
-          <FontAwesomeIcon icon="coffee" />
+
           <ul className="svg">
-            <li className="svg__icon"><FontAwesomeIcon icon="check-square" fill="black"/></li>
-            <li className="svg__icon"><FontAwesomeIcon icon="coffee" fill="black"/></li>
+            <li className="svg__icon">svg</li>
+            <li className="svg__icon">svg</li>
+            <li className="svg__icon"><Icon icon="LINKEDIN2" /></li>
             <li className="svg__icon">svg</li>
             <li className="svg__icon">svg</li>
           </ul>
