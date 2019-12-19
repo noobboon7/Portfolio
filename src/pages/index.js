@@ -21,16 +21,19 @@ const IndexPage = () => {
       
         <section className="splash">
           <h1 className="splash__text"> Hello worlds. I'm Jerry V. this is my site.</h1>
-          <Splash/>
-
+          <Splash className="canvas"/>
+          {/* onclick={() => } for span tag with spring transition */}
+          <span className="splash__arrow" >
+          <Icon fill="white" icon="DownArrow"/>
+          </span>
         </section>
         
         <section className="summary">
 
           <ul className="svg">
             <li className="svg__icon">svg</li>
-            <li className="svg__icon">svg</li>
-            <li className="svg__icon"><Icon icon="LINKEDIN2" /></li>
+            <li className="svg__icon"><Icon fill="rgb(51, 103, 145)" icon="PostGres" /></li>
+            <li className="svg__icon"><Icon fill="rgb(51, 103, 145)" icon="Linkedin"/></li>
             <li className="svg__icon">svg</li>
             <li className="svg__icon">svg</li>
           </ul>
