@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Thinking about closures  w/js</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Thinking about closures  w/js</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Hello worlds! Today I’m going to cover closures, an advanced Javascript topic which will help you write cleaner code; by understanding…
+</section>
+<section data-field="body" class="e-content">
+<section name="6f25" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="e4f1" id="e4f1" class="graf graf--h3 graf--leading graf--title">Thinking about closures w/js</h3></div><div class="section-inner sectionLayout--outsetColumn"><figure name="b3f7" id="b3f7" class="graf graf--figure graf--layoutOutsetCenter graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 1192px; max-height: 671px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="0*m8auOG4fyxP32tcx.jpg" data-width="1280" data-height="720" data-is-featured="true" src="https://cdn-images-1.medium.com/max/1200/0*m8auOG4fyxP32tcx.jpg"></div></figure></div><div class="section-inner sectionLayout--insetColumn"><p name="90de" id="90de" class="graf graf--p graf-after--figure">Hello worlds! Today I’m going to cover closures, an advanced Javascript topic which will help you write cleaner code; by understanding what happens when you return a variable within a function.</p><p name="51da" id="51da" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong"><em class="markup--em markup--p-em">NOTE:</em></strong> When you return the value of a function, that function is then completed and popped the execution stack and deleted from memory.</p><h4 name="4061" id="4061" class="graf graf--h4 graf-after--p">What is Closures</h4><blockquote name="1610" id="1610" class="graf graf--blockquote graf-after--h4">A <strong class="markup--strong markup--blockquote-strong">closure</strong> is the combination of a function bundled together (enclosed) with references to its surrounding state (the <strong class="markup--strong markup--blockquote-strong">lexical environment</strong>). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time. — MDN webdocs</blockquote><figure name="d3fa" id="d3fa" class="graf graf--figure graf--iframe graf--layoutOutsetLeft graf-after--blockquote"><figcaption class="imageCaption">game plans</figcaption></figure><figure name="8823" id="8823" class="graf graf--figure graf--layoutOutsetLeft graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 525px; max-height: 261px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 49.7%;"></div><img class="graf-image" data-image-id="0*s5gfP6FCB0Z26VJT.png" data-width="921" data-height="458" src="https://cdn-images-1.medium.com/max/600/0*s5gfP6FCB0Z26VJT.png"></div><figcaption class="imageCaption">what-are-closures-in-javascript</figcaption></figure><p name="eb49" id="eb49" class="graf graf--p graf-after--figure">So closures are practically functions within other function; A way I like to think about this is when you are part of a secret club(outer function) and only members(inner functions) of that club know club secrets(variables inside the parent function). Kind like being part of this team on the left and only them and there coaches know the game plan.</p><p name="5571" id="5571" class="graf graf--p graf-after--p">Lets also look at this example from author <a href="http://www.infragistics.com/community/blogs/b/dhananjay_kumar/posts/what-are-closures-in-javascript" data-href="http://www.infragistics.com/community/blogs/b/dhananjay_kumar/posts/what-are-closures-in-javascript" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">dhananjay_kumar</a> where we can examine the scope chain. Here we have global scope and a local scope that exists only with the function <code class="markup--code markup--p-code">foo()</code> . In the global scope we have a variable “doo”that is declared with the value of “a” and stored in your computer&#39;s memory as well as the function <code class="markup--code markup--p-code">foo()</code>. Within the local scope(inside the function <code class="markup--code markup--p-code">foo()</code>) another variable is declared with the same name (“doo”), but has a different value this time. When called on the last two lines, the result will output the following “doo” and “a”.</p><p name="446c" id="446c" class="graf graf--p graf-after--p"><a href="https://gph.is/2QBjeeI" data-href="https://gph.is/2QBjeeI" class="markup--anchor markup--p-anchor" rel="nofollow noopener noopener" target="_blank">https://gph.is/2QBjeeI</a></p><p name="1bdb" id="1bdb" class="graf graf--p graf-after--p">Some confusion may occur when get two different results from the same variable, but to put simply <code class="markup--code markup--p-code">doo !== doo.innerscope</code> . When we call <code class="markup--code markup--p-code">foo()</code> it declares doo with a value of “doo” and output to the console “doo” via console.log. The reason for this is because the closest declaration of the variable doo on the scope chain is <code class="markup--code markup--p-code">doo = &quot;doo&quot;</code> otherwise if it would look for another declaration of doo(which is equal to “a”). Now the last line in this is <code class="markup--code markup--p-code">console.log(doo)</code> which result in the letter a, because we asking the computer for a value on the global scope and since the function above finish executing and was remove before we <code class="markup--code markup--p-code">console.log(doo)</code> do is therefore the letter “a”.</p><h4 name="f00f" id="f00f" class="graf graf--h4 graf-after--p">Conclusion</h4><p name="b6dc" id="b6dc" class="graf graf--p graf-after--h4">This a rather small example of how closures work and a more complex closure example would be when writing a function nested within another function. The most important takeaway from this blog would be the concept of scope chain that helps you create a clearer picture for yourself when talking about closures.</p><figure name="69ff" id="69ff" class="graf graf--figure graf--layoutOutsetLeft graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 260px; max-height: 235px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 90.4%;"></div><img class="graf-image" data-image-id="0*4cKsfNt3W2mxEucM.png" data-width="260" data-height="235" src="https://cdn-images-1.medium.com/max/600/0*4cKsfNt3W2mxEucM.png"></div><figcaption class="imageCaption">scope chain</figcaption></figure><p name="0e87" id="0e87" class="graf graf--p graf-after--figure graf--trailing">In a nutshell, you can start to think about closures as a private conversation that has is own functions and variable, that are only said function would know about.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@jvr572" class="p-author h-card">Jerry Velázquez</a> on <a href="https://medium.com/p/65e6bd525c3f"><time class="dt-published" datetime="2019-11-29T20:52:52.742Z">November 29, 2019</time></a>.</p><p><a href="https://medium.com/@jvr572/thinking-about-closures-w-js-65e6bd525c3f" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on December 19, 2019.</p></footer></article></body></html>

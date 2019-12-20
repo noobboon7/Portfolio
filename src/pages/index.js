@@ -24,29 +24,73 @@ const IndexPage = () => {
           <Splash className="canvas"/>
           {/* onclick={() => } for span tag with spring transition */}
           <span className="splash__arrow" >
-          <Icon fill="white" icon="DownArrow"/>
+          <Icon height="100" width="100" viewBox="0 0 1000 1000" fill="white" icon="DownArrow"/>
           </span>
         </section>
-        
-        <section className="summary">
 
+        <section className="summary">
+        {/*Have backGround image of sky or video or animation */}
           <ul className="svg">
-            <li className="svg__icon">svg</li>
-            <li className="svg__icon"><Icon fill="rgb(51, 103, 145)" icon="PostGres" /></li>
-            <li className="svg__icon"><Icon fill="rgb(51, 103, 145)" icon="Linkedin"/></li>
-            <li className="svg__icon">svg</li>
-            <li className="svg__icon">svg</li>
+
+            <li className="svg__icon">
+              <Icon viewBox="0 0 1024 1024" fill="rgb(227, 79, 38)" icon="Html"/>
+              {/* <h3>Html</h3> */}
+            </li>
+            
+            <li className="svg__icon">
+              <Icon viewBox="0 0 1024 1024" fill="rgb(21, 114, 182)" icon="Css"/>
+            {/* <h3>Css</h3> */}
+            </li>
+
+            <li className="svg__icon">
+              
+              <Icon viewBox="0 0 1024 1024" fill="rgb(247, 223, 30)" icon="Javascript"/>
+              {/* <h3>Javascript</h3> */}
+            </li>
+
+            <li className="svg__icon">
+              <Icon viewBox="0 0 1024 1024" fill="rgb(97, 218, 251)" icon="React"/>
+            {/* <h3></h3> */}
+            </li>
+
+            <li className="svg__icon">
+              <Icon viewBox="0 0 1024 1024" fill="rgb(204, 52, 45)" icon="Ruby"/>
+            {/* <h3></h3> */}
+            </li>
+            <li className="svg__icon">
+              <Icon viewBox="0 0 1024 1024" fill="rgb(68, 121, 161)" icon="MySQL"/>
+            {/* <h3></h3> */}
+            </li>
+            <li className="svg__icon">
+              <Icon viewBox="0 0 1024 1024" fill="rgb(118, 74, 188)" icon="Redux"/>
+            {/* <h3></h3> */}
+            </li>
+            <li className="svg__icon">
+              <Icon viewBox="0 0 1024 1024" fill="rgb(55, 118, 171)" icon="Python"/>
+            </li>
+            <li className="svg__icon">
+              <Icon viewBox="0 0 1024 1024" fill="rgb(51, 103, 145)" icon="PostGres"/>
+            </li>
+            <li className="svg__icon">
+              <Icon viewBox="0 0 1024 1024" fill="rgb(225, 0, 152)" icon="Graphql"/>
+            </li>
+            
           </ul>
-          <p className="summary__description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet enim tortor at auctor urna. Ut porttitor leo a diam sollicitudin tempor. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Porta lorem mollis aliquam ut porttitor. Enim eu turpis egestas pretium aenean. Mi eget mauris pharetra et ultrices neque ornare. Justo nec ultrices dui sapien eget mi proin. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in. Dictum sit amet justo donec enim. Tincidunt augue interdum velit euismod in pellentesque massa. Tortor dignissim convallis aenean et tortor at.
-              Ut tristique et egestas quis ipsum suspendisse. Ultrices in iaculis nunc sed augue lacus viverra vitae. Nec ullamcorper sit amet risus nullam eget felis eget nunc. Sed id semper risus in hendrerit. Mauris pharetra et ultrices neque ornare aenean euismod. Diam in arcu cursus euismod. Elit pellentesque habitant morbi tristique senectus. In fermentum posuere urna nec. In ante metus dictum at tempor commodo ullamcorper. Dolor sit amet consectetur adipiscing elit ut aliquam. Sed tempus urna et pharetra pharetra. Sed augue lacus viverra vitae congue eu consequat. Consequat id porta nibh venenatis cras sed. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Ut pharetra sit amet aliquam. Pharetra vel turpis nunc eget lorem dolor sed viverra. Libero volutpat sed cras ornare.
-          </p>
+          <div className="summary__description" >
+            <h2 className="heading-1">
+              summary
+            </h2>
+            <p>
+              Hello! My name is Jerry Velazquez and I'm a full stack developer. I make full stack web applications and use a vary of technologies. Before this working as a developer I was working in live audio engineer for venues in NYC... I made my living that way as well as other odd job. Throughout my journey as a New Yorker I wore many hats and found that I was very adaptable to different jobs. write more here or make it consice!
+            </p>
+          </div>
         </section>
 
 
 
-      <div className="blogs">
+      <section className="blogs">
         <h2>blogs</h2>
-      </div>
+      </section>
       </main>
 
     </Layout>

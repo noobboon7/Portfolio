@@ -11,17 +11,18 @@
   background-color: rgba(0, 0, 0, 0.959);
   
   &__arrow {
-    margin-bottom: 5rem;
+    position: relative;
+    bottom: 5rem;
     justify-self: center;
     cursor: pointer;
     transition: all .2s;
 
     &:hover {
-      transform: translateY(-3px);
+      transform: translateY(-6px);
       box-shadow: 0 1rem 2rem rgba(#000,.2);
       
       &::after {
-        transform: scaleX(1.4) scaleY(1.6);
+        transform: scaleX(2.4) scaleY(2.6);
         opacity: 0;
       }
     }
@@ -54,24 +55,26 @@
 
   .svg {
     grid-column: 1/-1;
+    list-style: none;
 
     display: grid;
     grid: repeat(2, 1fr) / repeat(5, 1fr);
+    gap: 4rem;
     align-items: center;
     justify-items: center;
+    margin-top: 3rem;
 
     font-size: 3rem;
 
 
     &__icon {
-
       height: 5rem;
       width: 5rem;
     }
   }
 
-
   &__description {
+    color: $color-dark;
     padding: 1.5rem;
     font-size: 2rem;
     text-align: center;

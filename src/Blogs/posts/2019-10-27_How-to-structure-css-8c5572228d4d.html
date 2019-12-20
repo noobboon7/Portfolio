@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>How to structure css</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">How to structure css</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+On my journey to becoming a better css developer I was always struggling to organize my files in a way that made it easier for other…
+</section>
+<section data-field="body" class="e-content">
+<section name="943d" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="1569" id="1569" class="graf graf--h3 graf--leading graf--title">How to structure css</h3><figure name="54e3" id="54e3" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 468px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 66.8%;"></div><img class="graf-image" data-image-id="0*Kk-wLItU1vmrWYzo.jpg" data-width="1024" data-height="684" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*Kk-wLItU1vmrWYzo.jpg"></div><figcaption class="imageCaption">google image of page park</figcaption></figure><p name="d46c" id="d46c" class="graf graf--p graf-after--figure">On my journey to becoming a better css developer I was always struggling to organize my files in a way that made it easier for other developers modify; though, I’m glad to have found the BEM and 7 to 1 pattern in scss.</p><h4 name="2b5c" id="2b5c" class="graf graf--h4 graf-after--p">What is BEM</h4><figure name="88c2" id="88c2" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 638px; max-height: 359px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="0*8adMk8z4fw6msMvC.jpeg" data-width="638" data-height="359" src="https://cdn-images-1.medium.com/max/800/0*8adMk8z4fw6msMvC.jpeg"></div></figure><p name="8e04" id="8e04" class="graf graf--p graf-after--figure">BEM is an acronym that stands for Block-Element-Modifier; it’s used structure the layout of the page and make it easier to rearranging. The fastest way to spot if a developer is using this method is the syntax.</p><pre name="7eb4" id="7eb4" class="graf graf--pre graf-after--p"><em class="markup--em markup--pre-em">/* Block component */</em> </pre><pre name="d6b8" id="d6b8" class="graf graf--pre graf-after--pre">.btn {}  </pre><pre name="e559" id="e559" class="graf graf--pre graf-after--pre"><em class="markup--em markup--pre-em">/* Element that depends upon the block */</em>  </pre><pre name="6e60" id="6e60" class="graf graf--pre graf-after--pre">.btn__price {}  </pre><pre name="164e" id="164e" class="graf graf--pre graf-after--pre"><em class="markup--em markup--pre-em">/* Modifier that changes the style of the block */</em> </pre><pre name="f9c2" id="f9c2" class="graf graf--pre graf-after--pre">.btn--orange {}  </pre><pre name="a49f" id="a49f" class="graf graf--pre graf-after--pre">.btn--big {}</pre><p name="fa3e" id="fa3e" class="graf graf--p graf-after--pre">In this example, the block element is written as a high-level component, and should be referred to as the parent. The next element is denoted with two underscores, this part of the BEM system is responsible for the element that lives inside the block. Modifiers are written with two hyphens; these are meant to give the block some style, without affecting other buttons that you may have.</p><h4 name="4e2a" id="4e2a" class="graf graf--h4 graf-after--p">Seven to One Pattern</h4><p name="6dec" id="6dec" class="graf graf--p graf-after--h4">In this part, we are going to be talking about an architectural pattern that is very useful when trying to make changes to the style of the webpage. The 7-to-1 pattern is 1 main.scss file and 7 folders comprised of “particles” that make up the styling portion of your site.</p><p name="c8f2" id="c8f2" class="graf graf--p graf-after--p">**<strong class="markup--strong markup--p-strong">Note: </strong>7-to-1 pattern is predominately used with preprocessors like Sass. **</p><pre name="ac11" id="ac11" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">sass or css/<br>|<br>|– abstracts/<br>|   |– _variables.scss    # Sass Variables<br>|   |– _functions.scss    # Sass Functions<br>|   |– _mixins.scss       # Sass Mixins<br>|   |– _placeholders.scss # Sass Placeholders<br>|<br>|– base/<br>|   |– _reset.scss        # Reset/normalize<br>|   |– _typography.scss   # Typography rules<br>|   …                     # Etc.<br>|<br>|– components/<br>|   |– _buttons.scss      # Buttons<br>|   |– _carousel.scss     # Carousel<br>|   |– _cover.scss        # Cover<br>|   |– _dropdown.scss     # Dropdown<br>|   …                     # Etc.<br>|<br>|– layout/<br>|   |– _navigation.scss   # Navigation<br>|   |– _grid.scss         # Grid system<br>|   |– _header.scss       # Header<br>|   |– _footer.scss       # Footer<br>|   |– _sidebar.scss      # Sidebar<br>|   |– _forms.scss        # Forms<br>|   …                     # Etc.<br>|<br>|– pages/<br>|   |– _home.scss         # Home specific styles<br>|   |– _contact.scss      # Contact specific styles<br>|   …                     # Etc.<br>|<br>|– themes/<br>|   |– _theme.scss        # Default theme<br>|   |– _admin.scss        # Admin theme<br>|   …                     # Etc.<br>|<br>|– vendors/<br>|   |– _bootstrap.scss    # Bootstrap<br>|   |– _jquery-ui.scss    # jQuery UI<br>|   …                     # Etc.<br>|<br>`– main.scss              # Main Sass file</code></pre><p name="720b" id="720b" class="graf graf--p graf-after--pre">The <strong class="markup--strong markup--p-strong">base</strong> folder is going to hold all the boilerplate code that style the site on a global level. <strong class="markup--strong markup--p-strong">Abstracts</strong> has your building tools that make it easier for you to create styling without having to write the same code over and over again. <strong class="markup--strong markup--p-strong">Components</strong> are micro element of the page that are reusable in every part of a website. <strong class="markup--strong markup--p-strong">Pages</strong> is pretty self explanatory, and <strong class="markup--strong markup--p-strong">layouts</strong> are macro elements that are used on certain part of the site. <strong class="markup--strong markup--p-strong">Vendors</strong> are use to hold 3rd party libraries, and<strong class="markup--strong markup--p-strong"> theme</strong> are usually seen more in larger applications that like to change the layout of their site.</p><p name="9ee2" id="9ee2" class="graf graf--p graf-after--p graf--trailing">So these are pretty simple to implement, but very helpul when build clean reusable code that scales well.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@jvr572" class="p-author h-card">Jerry Velázquez</a> on <a href="https://medium.com/p/8c5572228d4d"><time class="dt-published" datetime="2019-10-27T19:36:38.323Z">October 27, 2019</time></a>.</p><p><a href="https://medium.com/@jvr572/how-to-structure-css-8c5572228d4d" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on December 19, 2019.</p></footer></article></body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Flexbox 💪🏼🟥 / cheatsheet</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Flexbox 💪🏼🟥 / cheatsheet</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+PHEW!!Finally made it to flexbox! After being entrenched is massive amounts of sass code I’ve made to working with flexbox, and got to say…
+</section>
+<section data-field="body" class="e-content">
+<section name="d325" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="212c" id="212c" class="graf graf--h3 graf--leading graf--title">Flexbox 💪🏼🟥 / cheatsheet</h3><figure name="9c58" id="9c58" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 349px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 49.9%;"></div><img class="graf-image" data-image-id="0*ypKQrcnWi_jiZulq.png" data-width="1400" data-height="698" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*ypKQrcnWi_jiZulq.png"></div></figure><p name="a509" id="a509" class="graf graf--p graf-after--figure">PHEW!!Finally made it to flexbox! After being entrenched is massive amounts of sass code I’ve made to working with flexbox, and got to say, it’s much easier to “wrap” than having to clearfix floating elements😵.</p><h4 name="3eec" id="3eec" class="graf graf--h4 graf-after--p">What’s Flexbox?</h4><p name="3b58" id="3b58" class="graf graf--p graf-after--h4">Simply put, flexbox is a layout mode in CSS3; a previous version of CSS defined four layout modes:</p><ul class="postList"><li name="0c59" id="0c59" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">block layout</strong> for laying out documents</li><li name="68d2" id="68d2" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">inline layout</strong> for laying out text</li><li name="4408" id="4408" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">table layout</strong> for laying 2D tabular data</li><li name="1bcc" id="1bcc" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">positioned layout</strong> for explicit positioning</li></ul><p name="bac8" id="bac8" class="graf graf--p graf-after--li">The main idea behind flexbox is to give the container the ability to expand and shrink elements to best use all the available space. Flexbox completely changes the way we build one dimensional layouts.</p><h4 name="b831" id="b831" class="graf graf--h4 graf-after--p">Concept</h4><figure name="7122" id="7122" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 447px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 63.800000000000004%;"></div><img class="graf-image" data-image-id="0*mimtQsp6DMLguQYD.png" data-width="890" data-height="568" src="https://cdn-images-1.medium.com/max/800/0*mimtQsp6DMLguQYD.png"></div><figcaption class="imageCaption">display: flex</figcaption></figure><p name="e466" id="e466" class="graf graf--p graf-after--figure">When setting a property to display “flex” on a(n)container you are also defaulting the items inside that container to the main axis. Keep in mind that when working with flexbox we only work on direction at a time. The main axis being the X axis and the cross is your Y Axis.</p><h4 name="831e" id="831e" class="graf graf--h4 graf-after--p">Syntax/Cheatsheet</h4><p name="ba3d" id="ba3d" class="graf graf--p graf-after--h4">Here is some of the most important syntax, in my opinion, that you’ll be using to create layouts with flexbox. Think about this more like a cheatsheet😁🤓.</p><pre name="67c9" id="67c9" class="graf graf--pre graf-after--p">//container properties </pre><pre name="5522" id="5522" class="graf graf--pre graf-after--pre">flex-direction: row /*X-axis*/| row-reverse | column /*Y-axis*/| column-reverse</pre><pre name="4c8b" id="4c8b" class="graf graf--pre graf-after--pre">flex-wrap: nowrap| wrap | wrap-reverse</pre><pre name="f624" id="f624" class="graf graf--pre graf-after--pre">justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly </pre><pre name="0415" id="0415" class="graf graf--pre graf-after--pre">align-items: stretch | flex-start | flex-end | center | baseline</pre><pre name="5281" id="5281" class="graf graf--pre graf-after--pre">align-content: flex-start | flex-end | center | space-between | space-around</pre><pre name="6ac9" id="6ac9" class="graf graf--pre graf-after--pre">//item properties </pre><pre name="e574" id="e574" class="graf graf--pre graf-after--pre">align-self: auto | stretch | flex-start | flex-end | center | baseline</pre><pre name="de61" id="de61" class="graf graf--pre graf-after--pre">order: 0 | &lt;integer&gt;</pre><pre name="8f82" id="8f82" class="graf graf--pre graf-after--pre">flex-grow: 0 | &lt;integer&gt;</pre><pre name="91fa" id="91fa" class="graf graf--pre graf-after--pre">flex-shrink: 1| &lt;integer&gt;</pre><pre name="6e7b" id="6e7b" class="graf graf--pre graf-after--pre">flex-basis: auto| &lt;length&gt;</pre><pre name="44b4" id="44b4" class="graf graf--pre graf-after--pre">or just flex: 0 1 auto</pre><figure name="1a6e" id="1a6e" class="graf graf--figure graf-after--pre"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 307px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 43.9%;"></div><img class="graf-image" data-image-id="1*ZZREVSPxe5Ll9U28dF6LPA.png" data-width="1265" data-height="555" src="https://cdn-images-1.medium.com/max/800/1*ZZREVSPxe5Ll9U28dF6LPA.png"></div></figure><p name="af4f" id="af4f" class="graf graf--p graf-after--figure">since medium isn’t supporting codepen repls I took a screenshot so you can see what display flex is doing to the items in the grey container. You can always click on the link below to experiment with flexbox. Try plugging in the css code above as well to see what types of layout you can get with flexbox.</p><p name="9047" id="9047" class="graf graf--p graf-after--p"><a href="https://codepen.io/pen/?editors=1100#0" data-href="https://codepen.io/pen/?editors=1100#0" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">https://codepen.io/pen/?editors=1100#0</a></p><h4 name="05e8" id="05e8" class="graf graf--h4 graf-after--p">Conclusion</h4><p name="2ef7" id="2ef7" class="graf graf--p graf-after--h4 graf--trailing">This approach to making a layout with css is definitely much easier than setting it up with any block layout I’ve done. Not to mention that I do find myself write a bit less css code. From the research I’ve been doing css grid, flexbox and grid are compatible and will make the layout of a web page a faster process.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@jvr572" class="p-author h-card">Jerry Velázquez</a> on <a href="https://medium.com/p/3926837589ee"><time class="dt-published" datetime="2019-11-09T00:28:50.155Z">November 9, 2019</time></a>.</p><p><a href="https://medium.com/@jvr572/flexbox-cheatsheet-3926837589ee" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on December 19, 2019.</p></footer></article></body></html>

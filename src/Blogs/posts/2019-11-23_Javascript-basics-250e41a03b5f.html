@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Javascript basics</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Javascript basics</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Hey all, I recently was asked about web development by a relative of mine who want to venture into coding. I really wasn’t able to break…
+</section>
+<section data-field="body" class="e-content">
+<section name="55ae" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="fd89" id="fd89" class="graf graf--h3 graf--leading graf--title">Javascript basics</h3><figure name="635b" id="635b" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 560px; max-height: 272px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 48.6%;"></div><img class="graf-image" data-image-id="0*pP9BLZTsfS71EhdM.jpg" data-width="560" data-height="272" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*pP9BLZTsfS71EhdM.jpg"></div><figcaption class="imageCaption">Javascript logo</figcaption></figure><p name="4ce7" id="4ce7" class="graf graf--p graf-after--figure">Hey all, I recently was asked about web development by a relative of mine who want to venture into coding. I really wasn’t able to break down what I was doing in the console without having to explain some of the basics to him. So, in this blog I’m going to go over some fundamental that make Javascript run under the hood.</p><h4 name="0366" id="0366" class="graf graf--h4 graf-after--p">What is Javascript (High-level overview)</h4><blockquote name="1ffa" id="1ffa" class="graf graf--pullquote graf-after--h4">JavaScript is a programming language that adds interactivity to your website (for example games, responses when buttons are pressed or data is entered in forms, dynamic styling, and animation). -MDN Docs</blockquote><p name="09ee" id="09ee" class="graf graf--p graf-after--pullquote">In <strong class="markup--strong markup--p-strong">Web Developmen</strong>t Javascript is a client side language, which can be used to design and program how the web pages behave on the occurrence of an event. However, with more advancement in technology we can as use Javascript as a browser engine; which works as a bridge between the User interface and the rendering engine. According to the inputs from various user interfaces, it queries and manipulates the rendering engine.</p><figure name="1843" id="1843" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 499px; max-height: 443px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 88.8%;"></div><img class="graf-image" data-image-id="0*_7gQnM4nWdI6z1Ji.png" data-width="499" data-height="443" src="https://cdn-images-1.medium.com/max/800/0*_7gQnM4nWdI6z1Ji.png"></div></figure><p name="dfee" id="dfee" class="graf graf--p graf-after--figure">If you are chrome user, then your browser engine is being powered by google’s V8 engine(using JS).</p><h4 name="3466" id="3466" class="graf graf--h4 graf-after--p">Variables</h4><p name="28d8" id="28d8" class="graf graf--p graf-after--h4">Variables are containers that you can store values in; by declaring a <code class="markup--code markup--p-code">var</code>(less recommended), <code class="markup--code markup--p-code">const, or let </code>keywords, followed by any name you’ll have successfully created a variable.</p><pre name="a3c9" id="a3c9" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code">let myVariabel = &quot;name&quot;<br>var myVariabel = &quot;name&quot; (not recommended)<br>const myVariabel = &quot;name&quot;</code></pre><pre name="c8f3" id="c8f3" class="graf graf--pre graf-after--pre">variable breakdown: Keyword variableName = Data Type</pre><h4 name="3a84" id="3a84" class="graf graf--h4 graf-after--pre">Data Types</h4><ol class="postList"><li name="27c4" id="27c4" class="graf graf--li graf-after--h4">Strings: A string is a data type that is surrounded by quotes single or double as well as backticks <code class="markup--code markup--li-code">&quot;dbl&quot; &#39;single&#39; `bcktck`</code></li><li name="2a5b" id="2a5b" class="graf graf--li graf-after--li">Numbers: a number type is represented as integers and floating point number. <code class="markup--code markup--li-code">integer: 1234 etc. float: 1.3333, 2.44</code></li><li name="600c" id="600c" class="graf graf--li graf-after--li">Booleans: only two values here True and false, used to create a flow of logic.</li><li name="0a8e" id="0a8e" class="graf graf--li graf-after--li">Null: In Javascript null is reference to a non-existing object or empty for some reason.</li><li name="fc00" id="fc00" class="graf graf--li graf-after--li">Undefined: The meaning to undefined is value is not assigned; it could also mean if a variable is declared, but not assigned, then its value is undefined.</li><li name="60b6" id="60b6" class="graf graf--li graf-after--li">Objects: this data type is special; objects are used to store collections of data and more complex entities.</li><li name="6527" id="6527" class="graf graf--li graf-after--li">Symbols: this type is used to create unique identifiers for objects.</li></ol><h4 name="8d2e" id="8d2e" class="graf graf--h4 graf-after--li">Conclusion</h4><p name="4e43" id="4e43" class="graf graf--p graf-after--h4 graf--trailing">These are some of the very basic concepts that you should get familiar with before getting into building things with javascript. It should only take about 15 minutes to get well acquainted with the data types,and they can be easily forgotten so it a good idea to commit these ideas to memory. That’s all for now, in the coming weeks I will go over more of javascript and other technologies.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@jvr572" class="p-author h-card">Jerry Velázquez</a> on <a href="https://medium.com/p/250e41a03b5f"><time class="dt-published" datetime="2019-11-23T00:39:30.374Z">November 23, 2019</time></a>.</p><p><a href="https://medium.com/@jvr572/javascript-basics-250e41a03b5f" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on December 19, 2019.</p></footer></article></body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>React-Three-Fiber</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">React-Three-Fiber</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Hey all! I am super excited this week, because I’m finally getting around to finishing my portfolio and displaying the tech I’ve been…
+</section>
+<section data-field="body" class="e-content">
+<section name="2a56" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="96af" id="96af" class="graf graf--h3 graf--leading graf--title">React-Three-Fiber</h3></div><div class="section-inner sectionLayout--outsetColumn"><figure name="cfd3" id="cfd3" class="graf graf--figure graf--layoutOutsetCenter graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 1192px; max-height: 670px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.2%;"></div><img class="graf-image" data-image-id="0*D4Vdy6ZQkDbsJ6c5.jpeg" data-width="1400" data-height="787" data-is-featured="true" src="https://cdn-images-1.medium.com/max/1200/0*D4Vdy6ZQkDbsJ6c5.jpeg"></div></figure></div><div class="section-inner sectionLayout--insetColumn"><p name="1bf6" id="1bf6" class="graf graf--p graf-after--figure">Hey all! I am super excited this week, because I’m finally getting around to finishing my portfolio and displaying the tech I’ve been working with. I been looking around and there are some really impressive dev portfolios out there, but the ones that stood out the most were the ones with 3D animations.</p><p name="f9c7" id="f9c7" class="graf graf--p graf-after--p">For example: <a href="https://www.awwwards.com/sites/bruno-simon-portfolio" data-href="https://www.awwwards.com/sites/bruno-simon-portfolio" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">https://www.awwwards.com/sites/bruno-simon-portfolio</a> .</p><p name="7416" id="7416" class="graf graf--p graf-after--p">In this blog, I’m going to try and set you up with some very fundamental knowledge with react-three-fiber(a three js library), that will help you start building your own 3d animations.</p><h4 name="c828" id="c828" class="graf graf--h4 graf-after--p">NPM install</h4><p name="a2e6" id="a2e6" class="graf graf--p graf-after--h4">Depending on which package manager you use in react will determine the syntax you use. In my example below I will be using NPM.</p><pre name="0a6d" id="0a6d" class="graf graf--pre graf-after--p">npm install three react-three-fiber react-spring(optional)</pre><p name="8b9a" id="8b9a" class="graf graf--p graf-after--pre">I personal just started using react-spring for the physic of objects in the animation; however, installing <code class="markup--code markup--p-code">react-spring</code> as dependency is optional.</p><h4 name="e0b5" id="e0b5" class="graf graf--h4 graf-after--p">Importing</h4><pre name="ceea" id="ceea" class="graf graf--pre graf-after--h4">import React, { useState, useRef, useEffect } from &#39;react&#39;</pre><pre name="c0d0" id="c0d0" class="graf graf--pre graf-after--pre">import * as THREE from &#39;three&#39;;</pre><pre name="7de7" id="7de7" class="graf graf--pre graf-after--pre">import { Canvas, extend, useThree, useRender } from &quot;react-three-fiber&quot;;</pre><pre name="e02c" id="e02c" class="graf graf--pre graf-after--pre">import { useSpring, a } from &#39;react-spring/three&#39;</pre><pre name="9b2a" id="9b2a" class="graf graf--pre graf-after--pre">import { OrbitControls } from &#39;three/examples/jsm/controls/OrbitControls&#39;</pre><p name="3562" id="3562" class="graf graf--p graf-after--pre">When successfully installing dependencies, you should then import like so…afterwards creating a canvas for your three js is made easier now with the help of <code class="markup--code markup--p-code">react-three-fiber</code>. Just create a component where the canvas will live and export the module so you can use it wherever you may see fit.</p><pre name="47a0" id="47a0" class="graf graf--pre graf-after--p">const Module = () =&gt; {</pre><pre name="cdb6" id="cdb6" class="graf graf--pre graf-after--pre"> return(</pre><pre name="4995" id="4995" class="graf graf--pre graf-after--pre">   &lt;Canvas&gt;</pre><pre name="2d7c" id="2d7c" class="graf graf--pre graf-after--pre">     &lt;Box/&gt; //separate component</pre><pre name="03c7" id="03c7" class="graf graf--pre graf-after--pre">     &lt;Plane/&gt; //separate component</pre><pre name="7ad3" id="7ad3" class="graf graf--pre graf-after--pre">   &lt;/Canvas&gt;</pre><pre name="9ca8" id="9ca8" class="graf graf--pre graf-after--pre"> )</pre><pre name="13e5" id="13e5" class="graf graf--pre graf-after--pre">}</pre><pre name="9cbc" id="9cbc" class="graf graf--pre graf-after--pre">export default Module;</pre><p name="2e08" id="2e08" class="graf graf--p graf-after--pre">Alternatively, you can also import a canvas by itself and create separate component, then import them into the file that has the canvas.</p><h4 name="5808" id="5808" class="graf graf--h4 graf-after--p">Creating an object</h4><figure name="85f7" id="85f7" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 182px; max-height: 143px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 78.60000000000001%;"></div><img class="graf-image" data-image-id="1*tzALNeclN2QxqTE-5lq4DA.png" data-width="182" data-height="143" src="https://cdn-images-1.medium.com/max/800/1*tzALNeclN2QxqTE-5lq4DA.png"></div><figcaption class="imageCaption">box created using THREE.js</figcaption></figure><p name="64df" id="64df" class="graf graf--p graf-after--figure">In the code below you will see the component that creates a box object to the screen.</p><pre name="f05a" id="f05a" class="graf graf--pre graf-after--p">const Box = () =&gt; {<br>/* React hooks</pre><pre name="51fc" id="51fc" class="graf graf--pre graf-after--pre"> const [hovered, setHovered] = useState(false)</pre><pre name="3c6e" id="3c6e" class="graf graf--pre graf-after--pre"> const [active, setActive] = useState(false)</pre><pre name="1446" id="1446" class="graf graf--pre graf-after--pre"> const props = useSpring({</pre><pre name="bd72" id="bd72" class="graf graf--pre graf-after--pre"> scale: active ? [1.3,1.3,1.3] : [1,1,1],</pre><pre name="3e08" id="3e08" class="graf graf--pre graf-after--pre"> color: hovered ? &quot;green&quot; : &quot;grey&quot;,</pre><pre name="60b7" id="60b7" class="graf graf--pre graf-after--pre"> })  React hooks */</pre><pre name="bbfa" id="bbfa" class="graf graf--pre graf-after--pre"> return(<br>// mesh is what hold the object</pre><pre name="3bfb" id="3bfb" class="graf graf--pre graf-after--pre">  &lt;a.mesh</pre><pre name="033b" id="033b" class="graf graf--pre graf-after--pre">  onPointerOver={() =&gt; setHovered(true)}</pre><pre name="3c97" id="3c97" class="graf graf--pre graf-after--pre">  onPointerOut={() =&gt; setHovered(false)}</pre><pre name="a817" id="a817" class="graf graf--pre graf-after--pre">  onClick={() =&gt; setActive(!active)}</pre><pre name="96d9" id="96d9" class="graf graf--pre graf-after--pre">  scale={props.scale}&gt;</pre><pre name="01d5" id="01d5" class="graf graf--pre graf-after--pre">    //stating that the shape I want is a box<br>    &lt;boxBufferGeometry attach=&quot;geometry&quot; args={[1.5,1.5,1.5]} /&gt;<br>    <br>    //giving the box a skin with the color &#39;grey&#39; <br>    &lt;a.meshPhysicalMaterial attach=&quot;material&quot; color={props.color} /&gt;</pre><pre name="b71e" id="b71e" class="graf graf--pre graf-after--pre">   //Please note the lowercase &#39;a.&#39; is for animation using react-       spring otherwise syntax is &lt;mesh&gt;<br>   &lt;/a.mesh&gt;</pre><pre name="dbc0" id="dbc0" class="graf graf--pre graf-after--pre"> )</pre><pre name="42a3" id="42a3" class="graf graf--pre graf-after--pre">}</pre><p name="35ba" id="35ba" class="graf graf--p graf-after--pre">OK! let’s walk through this component… at the very top I’m using hooks to change the state of the box, based on mouse events. If clicked the box grows larger and on hovering the mouse over the box it changes color to green, and when not hovered its default state is grey.</p><p name="0a55" id="0a55" class="graf graf--p graf-after--p">I then use a JSX mesh tag to wrap the object and pass in the properties I want it to have; note the lowercase <code class="markup--code markup--p-code">a.</code>, this is telling my mesh to use animation on changes to the object.</p><p name="4776" id="4776" class="graf graf--p graf-after--p">Inside the mesh the boxBufferGeometry tag is responsible for creating my geometric shape; args property is [x-axis, y-axis, z-axis]. The meshPhysicalMaterial, can have different skins from what I’ve seen so far; for instance, if I had a jpeg file that I wanted to place in the box… I’d have to write the property that places the image in the box, instead of the color property.</p><h4 name="59ae" id="59ae" class="graf graf--h4 graf-after--p">Conclusion</h4><p name="d277" id="d277" class="graf graf--p graf-after--h4">I had a difficult time trying to get anything on the page on my own, but with help from youtube I was able to get started using Three js. I will leave some useful links below that helped me grasp these concepts… I love using this new tech, but I’m still discovering it as I continue to use it. I really hope this article was helpful, and if you did find it helpful feel free to give it some likes/claps. Happy coding!</p><figure name="1bbf" id="1bbf" class="graf graf--figure graf--iframe graf-after--p"><figcaption class="imageCaption">Learn with Jason</figcaption></figure><div name="91c1" id="91c1" class="graf graf--mixtapeEmbed graf-after--figure"><a href="https://github.com/react-spring/react-three-fiber" data-href="https://github.com/react-spring/react-three-fiber" class="markup--anchor markup--mixtapeEmbed-anchor" title="https://github.com/react-spring/react-three-fiber"><strong class="markup--strong markup--mixtapeEmbed-strong">react-spring/react-three-fiber</strong><br><em class="markup--em markup--mixtapeEmbed-em">These demos are real, you can click them! They contain the full code, too. npm install three react-three-fiber This is…</em>github.com</a><a href="https://github.com/react-spring/react-three-fiber" class="js-mixtapeImage mixtapeImage u-ignoreBlock" data-media-id="1c8f72fd07e3fe3b14e3771011bb384b" data-thumbnail-img-id="0*sXl_Q4nZ17TdM6B5" style="background-image: url(https://cdn-images-1.medium.com/fit/c/160/160/0*sXl_Q4nZ17TdM6B5);"></a></div><div name="97ea" id="97ea" class="graf graf--mixtapeEmbed graf-after--mixtapeEmbed"><a href="https://alligator.io/react/react-with-threejs/" data-href="https://alligator.io/react/react-with-threejs/" class="markup--anchor markup--mixtapeEmbed-anchor" title="https://alligator.io/react/react-with-threejs/"><strong class="markup--strong markup--mixtapeEmbed-strong">Write three.js in React Using react-three-fiber</strong><br><em class="markup--em markup--mixtapeEmbed-em">So you want to write some 3D graphics/animations in your React apps using three.js? Let&#39;s see how we can do just that…</em>alligator.io</a><a href="https://alligator.io/react/react-with-threejs/" class="js-mixtapeImage mixtapeImage u-ignoreBlock" data-media-id="f03a4a7e9a1f2b4591d533d98f699bca" data-thumbnail-img-id="0*NKlKkKs89yif_hDu" style="background-image: url(https://cdn-images-1.medium.com/fit/c/160/160/0*NKlKkKs89yif_hDu);"></a></div><div name="941c" id="941c" class="graf graf--mixtapeEmbed graf-after--mixtapeEmbed graf--trailing"><a href="https://threejs.org/" data-href="https://threejs.org/" class="markup--anchor markup--mixtapeEmbed-anchor" title="https://threejs.org/"><strong class="markup--strong markup--mixtapeEmbed-strong">three.js - JavaScript 3D library</strong><br><em class="markup--em markup--mixtapeEmbed-em">Edit description</em>threejs.org</a><a href="https://threejs.org/" class="js-mixtapeImage mixtapeImage u-ignoreBlock" data-media-id="2c7c4d08aa3f741e6c9bce08d109f912" data-thumbnail-img-id="0*LraO9oF6S-3HlS8b" style="background-image: url(https://cdn-images-1.medium.com/fit/c/160/160/0*LraO9oF6S-3HlS8b);"></a></div></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@jvr572" class="p-author h-card">Jerry Velázquez</a> on <a href="https://medium.com/p/e57d5e2153ca"><time class="dt-published" datetime="2019-12-14T21:58:37.124Z">December 14, 2019</time></a>.</p><p><a href="https://medium.com/@jvr572/react-three-fiber-e57d5e2153ca" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on December 19, 2019.</p></footer></article></body></html>

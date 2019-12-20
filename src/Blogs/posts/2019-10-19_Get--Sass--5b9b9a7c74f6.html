@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Get( Sass)</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Get( Sass)</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+What is sass?
+</section>
+<section data-field="body" class="e-content">
+<section name="d031" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="08b9" id="08b9" class="graf graf--h3 graf--leading graf--title">Get( Sass)</h3><figure name="e624" id="e624" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 467px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 66.7%;"></div><img class="graf-image" data-image-id="0*1gcqc7LuzHtDY8uw.png" data-width="1200" data-height="800" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*1gcqc7LuzHtDY8uw.png"></div></figure><h4 name="bf65" id="bf65" class="graf graf--h4 graf-after--figure"><strong class="markup--strong markup--h4-strong">What is sass?</strong></h4><blockquote name="17c9" id="17c9" class="graf graf--blockquote graf-after--h4 graf--trailing">Sass(short for syntactically awesome style sheets)is a style sheet language initially designed by Hampton Catlin and developed by Natalie Weizenbaum. -wikipedia</blockquote></div></div></section><section name="f653" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h4 name="e9bb" id="e9bb" class="graf graf--h4 graf--leading">Preprocessing css</h4><p name="6a76" id="6a76" class="graf graf--p graf-after--h4">So the great thing about sass is that it precompiles css for you, and in essence you’ll be writing a lot less pure css code. This blog will explain how you will be able to use css syntax with some really cool features that come with SASS.</p><h4 name="4bc8" id="4bc8" class="graf graf--h4 graf-after--p">Variables</h4><p name="b41e" id="b41e" class="graf graf--p graf-after--h4">If you’ve been use css you’ll know that you can use variable with pure css too; however what changes is that way you write those variables</p><pre name="1040" id="1040" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code u-paddingRight0 u-marginRight0">////scss syntax for writing variables /////<br>$font-stack:    Helvetica<strong class="markup--strong markup--pre-strong">,</strong> sans-serif;<br>$primary-color: #333;</code></pre><pre name="6ea3" id="6ea3" class="graf graf--pre graf-after--pre"><code class="markup--code markup--pre-code u-paddingRight0 u-marginRight0">/////how they are implemented /////<br>body {<br>  <strong class="markup--strong markup--pre-strong">font</strong>: 100% $font-stack;<br>  <strong class="markup--strong markup--pre-strong">color</strong>: $primary-color;<br>}</code></pre><pre name="b84b" id="b84b" class="graf graf--pre graf-after--pre">//how they are translated to css ///<br><code class="markup--code markup--pre-code u-paddingRight0 u-marginRight0">body {<br>  <strong class="markup--strong markup--pre-strong">font</strong>: 100% Helvetica, sans-serif;<br>  <strong class="markup--strong markup--pre-strong">color</strong>: #333;<br>}</code></pre><p name="f75a" id="f75a" class="graf graf--p graf-after--pre">now here is without a preprocessor like Sass or Less.</p><pre name="b353" id="b353" class="graf graf--pre graf-after--p">:root {<br>  --bgcolour: #ffffd0;<br>  --bqindents: 40px;<br>  --warningtextsize: 125%;<br>}</pre><h4 name="4fd2" id="4fd2" class="graf graf--h4 graf-after--pre">Nesting</h4><p name="6718" id="6718" class="graf graf--p graf-after--h4">If you’ve probably already encountered nesting with HTML and you’ve noticed that it has a clear hierarchy. When writing pure css you have to write the parent element along with the child element that you want manipulate multiple times: not really giving you a good visual or good time writing it. With sass we have the option for nesting, take a look at the example below:</p><h3 name="0d8a" id="0d8a" class="graf graf--h3 graf-after--p">SCSS SYNTAX</h3><pre name="196d" id="196d" class="graf graf--pre graf-after--h3"><code class="markup--code markup--pre-code u-paddingRight0 u-marginRight0">//Nesting in sass <br>nav {<br>  ul {<br>    <strong class="markup--strong markup--pre-strong">margin</strong>: 0;<br>    <strong class="markup--strong markup--pre-strong">padding</strong>: 0;<br>    <strong class="markup--strong markup--pre-strong">list-style</strong>: none;<br>  }</code></pre><pre name="80ac" id="80ac" class="graf graf--pre graf-after--pre"><code class="markup--code markup--pre-code u-paddingRight0 u-marginRight0">  li { <strong class="markup--strong markup--pre-strong">display</strong>: inline-block; }</code></pre><pre name="4522" id="4522" class="graf graf--pre graf-after--pre"><code class="markup--code markup--pre-code u-paddingRight0 u-marginRight0">  a {<br>    <strong class="markup--strong markup--pre-strong">display</strong>: block;<br>    <strong class="markup--strong markup--pre-strong">padding</strong>: 6px 12px;<br>    <strong class="markup--strong markup--pre-strong">text-decoration</strong>: none;<br>  }<br>}</code></pre><pre name="2bab" id="2bab" class="graf graf--pre graf-after--pre">/////results in pure css/////<br><code class="markup--code markup--pre-code u-paddingRight0 u-marginRight0">nav ul {<br>  <strong class="markup--strong markup--pre-strong">margin</strong>: 0;<br>  <strong class="markup--strong markup--pre-strong">padding</strong>: 0;<br>  <strong class="markup--strong markup--pre-strong">list-style</strong>: none;<br>}<br>nav li {<br>  <strong class="markup--strong markup--pre-strong">display</strong>: inline-block;<br>}<br>nav a {<br>  <strong class="markup--strong markup--pre-strong">display</strong>: block;<br>  <strong class="markup--strong markup--pre-strong">padding</strong>: 6px 12px;<br>  <strong class="markup--strong markup--pre-strong">text-decoration</strong>: none;<br>}</code></pre><h4 name="a7c5" id="a7c5" class="graf graf--h4 graf-after--pre">Partials</h4><blockquote name="1598" id="1598" class="graf graf--blockquote graf--hasDropCapModel graf-after--h4">Partial Sass files contain little snippets of CSS that you can include in other Sass files. This is a great way to modularize your CSS and help keep things easier to maintain. A partial is a Sass file named with a leading underscore. You might name it something like <code class="markup--code markup--blockquote-code">_&lt;filename&gt;.scss</code>. The underscore lets Sass know that the file is only a partial file and that it should not be generated into a CSS file. Sass partials are used with the <code class="markup--code markup--blockquote-code">@use</code> rule. — sass-lang.com/guide</blockquote><p name="8094" id="8094" class="graf graf--p graf-after--blockquote">If you like reusable code then this particular feature will come in very handy.</p><pre name="cf25" id="cf25" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code u-paddingRight0 u-marginRight0"><em class="markup--em markup--pre-em">// _base.scss<br></em>$font-stack:    Helvetica<strong class="markup--strong markup--pre-strong">,</strong> sans-serif;<br>$primary-color: #333;<br><br>body {<br>  <strong class="markup--strong markup--pre-strong">font</strong>: 100% $font-stack;<br>  <strong class="markup--strong markup--pre-strong">color</strong>: $primary-color;<br>}</code></pre><pre name="b107" id="b107" class="graf graf--pre graf-after--pre"><code class="markup--code markup--pre-code u-paddingRight0 u-marginRight0"><em class="markup--em markup--pre-em">// styles.scss<br></em><strong class="markup--strong markup--pre-strong">@use</strong> &#39;base&#39;;<br><br><strong class="markup--strong markup--pre-strong">.inverse</strong> {<br>  <strong class="markup--strong markup--pre-strong">background-color</strong>: base<strong class="markup--strong markup--pre-strong">.</strong>$primary-color;<br>  <strong class="markup--strong markup--pre-strong">color</strong>: white;<br>}</code></pre><h4 name="b943" id="b943" class="graf graf--h4 graf-after--pre">Mix-ins</h4><p name="611b" id="611b" class="graf graf--p graf-after--h4">Mix-ins are a great tool for when you don’t want to write in to much of the same code and the great part about it is that you can feed it an augment to specify the parameters.</p><pre name="0409" id="0409" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code u-paddingRight0 u-marginRight0"><strong class="markup--strong markup--pre-strong">@mixin</strong> <strong class="markup--strong markup--pre-strong">transform</strong>($property) {<br>  -webkit-transform: $property;<br>  -ms-transform: $property;<br>  <strong class="markup--strong markup--pre-strong">transform</strong>: $property;<br>}<br><strong class="markup--strong markup--pre-strong">.box</strong> { <strong class="markup--strong markup--pre-strong">@include</strong> <strong class="markup--strong markup--pre-strong">transform</strong>(<strong class="markup--strong markup--pre-strong">rotate</strong>(30deg)); }</code></pre><p name="d161" id="d161" class="graf graf--p graf-after--pre">you’ll notice the @include is used, in order to invoke this mix-in.</p><h4 name="b1d0" id="b1d0" class="graf graf--h4 graf-after--p">Operators</h4><p name="c3d9" id="c3d9" class="graf graf--p graf-after--h4">Operations are pretty standard across the board, by this I mean +- () * /; these all works like basic arithmetic operations.</p><pre name="a9ef" id="a9ef" class="graf graf--pre graf-after--p"><code class="markup--code markup--pre-code u-paddingRight0 u-marginRight0"><strong class="markup--strong markup--pre-strong">.container</strong> {<br>  <strong class="markup--strong markup--pre-strong">width</strong>: 100%;<br>}<br><br>article<strong class="markup--strong markup--pre-strong">[</strong>role<strong class="markup--strong markup--pre-strong">=</strong>&quot;main&quot;<strong class="markup--strong markup--pre-strong">]</strong> {<br>  <strong class="markup--strong markup--pre-strong">float</strong>: left;<br>  <strong class="markup--strong markup--pre-strong">width</strong>: 600px <strong class="markup--strong markup--pre-strong">/</strong> 960px <strong class="markup--strong markup--pre-strong">*</strong> 100%;<br>}<br><br>aside<strong class="markup--strong markup--pre-strong">[</strong>role<strong class="markup--strong markup--pre-strong">=</strong>&quot;complementary&quot;<strong class="markup--strong markup--pre-strong">]</strong> {<br>  <strong class="markup--strong markup--pre-strong">float</strong>: right;<br>  <strong class="markup--strong markup--pre-strong">width</strong>: 300px <strong class="markup--strong markup--pre-strong">/</strong> 960px <strong class="markup--strong markup--pre-strong">*</strong> 100%;<br>}</code></pre><h4 name="8d21" id="8d21" class="graf graf--h4 graf-after--pre">Conclusion</h4><p name="6663" id="6663" class="graf graf--p graf-after--h4">These are most of the features that you will use in sass, though their is another that I did not mention and thats extend/inheritance. If you’d like to know more about inheritance please do visit <a href="https://sass-lang.com/guide" data-href="https://sass-lang.com/guide" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">https://sass-lang.com/guide</a>, they have a very comprehensive guide on sass.</p><p name="7779" id="7779" class="graf graf--p graf-after--p graf--trailing"><a href="https://medium.com/me/stories" data-href="https://medium.com/me/stories" class="markup--anchor markup--p-anchor" target="_blank">More on css</a> coming soon.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@jvr572" class="p-author h-card">Jerry Velázquez</a> on <a href="https://medium.com/p/5b9b9a7c74f6"><time class="dt-published" datetime="2019-10-19T22:59:36.701Z">October 19, 2019</time></a>.</p><p><a href="https://medium.com/@jvr572/get-sass-5b9b9a7c74f6" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on December 19, 2019.</p></footer></article></body></html>

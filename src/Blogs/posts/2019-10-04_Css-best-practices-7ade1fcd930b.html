@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Css best practices</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Css best practices</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+This blog post is intended for people getting started with css, and explains a high level overview of css.
+</section>
+<section data-field="body" class="e-content">
+<section name="f324" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="4f60" id="4f60" class="graf graf--h3 graf--leading graf--title">Css best practices</h3><h4 name="1742" id="1742" class="graf graf--h4 graf-after--h3 graf--subtitle">This blog post is intended for people getting started with css, and explains a high level overview of css.</h4><figure name="fec7" id="fec7" class="graf graf--figure graf-after--h4"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 401px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 57.199999999999996%;"></div><img class="graf-image" data-image-id="0*v59dLJr-6p2LiPsG.jpg" data-width="1260" data-height="721" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*v59dLJr-6p2LiPsG.jpg"></div><figcaption class="imageCaption">CSS (Cascading style sheets)Logo</figcaption></figure><h4 name="9124" id="9124" class="graf graf--h4 graf-after--figure"><strong class="markup--strong markup--h4-strong">Introduction</strong></h4><p name="3ce4" id="3ce4" class="graf graf--p graf-after--h4">If you re new to web development, than you might have already seen the three pillars that make a webpage: HMTL, CSS, and JavaScript. Once you start getting your hands dirty building websites with these three technologies, you might comes to question how they work? Well, covering all three in this blog post might be too much information to write, so we’ll just focus on the style portion.</p><p name="1110" id="1110" class="graf graf--p graf-after--p graf--trailing">It might be worth mentioning that this is not a tutorial, but more of a theoretical blog; however, if you would like some good recommendations here is playlist I like to refer to whenever I need some direction: <a href="https://bit.ly/2LHvCJU" data-href="https://bit.ly/2LHvCJU" class="markup--anchor markup--p-anchor" rel="nofollow noopener" target="_blank">https://bit.ly/2LHvCJU</a>.</p></div></div></section><section name="87ef" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h4 name="3d3a" id="3d3a" class="graf graf--h4 graf--leading">High level overview</h4><p name="be00" id="be00" class="graf graf--p graf-after--h4">When a browser displays a document, it must combine the document’s content with its style information. It processes the document in a number of stages, which I’ve listed below.</p><figure name="ce6c" id="ce6c" class="graf graf--figure graf--layoutOutsetLeft graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 525px; max-height: 223px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 42.4%;"></div><img class="graf-image" data-image-id="0*ClT1ipRrA-pPwvPF.png" data-width="724" data-height="307" src="https://cdn-images-1.medium.com/max/600/0*ClT1ipRrA-pPwvPF.png"></div></figure><ol class="postList"><li name="a9f8" id="a9f8" class="graf graf--li graf-after--figure">The browser loads the HTML received from a server.</li><li name="4375" id="4375" class="graf graf--li graf-after--li">Converts the HTML into a DOM (<em class="markup--em markup--li-em">Document Object Model</em>). The DOM represents the document in the computer’s memory.</li><li name="14d4" id="14d4" class="graf graf--li graf-after--li">The browser then fetches most of the resources that are linked to by the HTML document, such as embedded images and videos … and linked CSS! *<a href="https://www.thoughtco.com/javascript-execution-order-2037518" data-href="https://www.thoughtco.com/javascript-execution-order-2037518" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank">JavaScript</a> is handled a bit later on in the process.*</li><li name="ee01" id="ee01" class="graf graf--li graf-after--li">The browser then parses the fetched CSS, sorts them by their selector types, e.g. element, class, ID, and so on. Based on the selectors it finds, it works out which rules should be applied to which nodes in the DOM.</li><li name="0065" id="0065" class="graf graf--li graf-after--li">The render tree is laid out in the structure it should appear in after the css rules have been applied to it.</li><li name="94c5" id="94c5" class="graf graf--li graf-after--li graf--trailing">The visual display of the page is shown on the screen.</li></ol></div></div></section><section name="5449" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="042e" id="042e" class="graf graf--h3 graf--leading">Three Pillars of writing good CSS &amp; HTML</h3><h4 name="0b52" id="0b52" class="graf graf--h4 graf-after--h3">Responsive Web Design</h4><p name="4217" id="4217" class="graf graf--p graf-after--h4">When making your website it is good practice to keep in mind that people will be viewing your site on a range of devices; therefore, a <a href="https://www.investopedia.com/terms/m/mobile-first-strategy.asp" data-href="https://www.investopedia.com/terms/m/mobile-first-strategy.asp" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">mobile-first-strategy</a> is recommended when building your site. Other things to keep in mind:</p><ul class="postList"><li name="ba6e" id="ba6e" class="graf graf--li graf-after--p">Fluid Layouts</li><li name="6331" id="6331" class="graf graf--li graf-after--li">Media Queries</li><li name="d0a7" id="d0a7" class="graf graf--li graf-after--li">Responsive Images</li><li name="acdd" id="acdd" class="graf graf--li graf-after--li">Correct Units</li></ul><h4 name="7e88" id="7e88" class="graf graf--h4 graf-after--li">Maintainable and scalable code</h4><p name="a938" id="a938" class="graf graf--p graf-after--h4">Writing maintainable and scalable code means: Writing clean code, easy to understand, reusable, organized files, proper names for classes, and good structure on HTML file. This is most beneficial to you the developer and other developers looking at your code base.</p><h4 name="81d7" id="81d7" class="graf graf--h4 graf-after--p">Web Performance</h4><p name="b2ca" id="b2ca" class="graf graf--p graf-after--h4 graf--trailing">The performance of your site is important for the UX(User Experience), and makes loading your pages much faster. This means less wait time for your user and less HTTP request. If you’d like to know more about making your site faster I’d recommend using a css preprocessor like <a href="https://sass-lang.com/guide" data-href="https://sass-lang.com/guide" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Sass</a>.</p></div></div></section><section name="7f19" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h4 name="6e4c" id="6e4c" class="graf graf--h4 graf--leading">Conclusion</h4><p name="84dd" id="84dd" class="graf graf--p graf-after--h4 graf--trailing">Well, that&#39;s all for now folk! As much as I’d like to go into further details about some of the cool things I’ve learned in css, this is just a high level overview on some of the best practices to keep in mind when styling your work. Feel free to contact me on my social media, I always love working with other peeps!</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@jvr572" class="p-author h-card">Jerry Velázquez</a> on <a href="https://medium.com/p/7ade1fcd930b"><time class="dt-published" datetime="2019-10-04T00:28:18.407Z">October 4, 2019</time></a>.</p><p><a href="https://medium.com/@jvr572/css-best-practices-7ade1fcd930b" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on December 19, 2019.</p></footer></article></body></html>
