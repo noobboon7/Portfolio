@@ -1,3 +1,9 @@
+---
+
+title: "How code can help you fold clothes"
+date: "May 28, 2019"
+
+---
 # How code can help you fold clothes
 
 I recently started looking into A.I and machine learning for a my own curiosity, but more so with the agenda to create a machine that…

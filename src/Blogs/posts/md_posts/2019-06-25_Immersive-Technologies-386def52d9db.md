@@ -1,3 +1,9 @@
+---
+
+title: "Immersive Technologies"
+date: "June 25, 2019"
+
+---
 # Immersive Technologies
 
 Intro

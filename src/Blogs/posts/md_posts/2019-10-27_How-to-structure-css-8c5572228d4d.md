@@ -1,3 +1,9 @@
+---
+
+title: "How to structure css"
+date: "October 27, 2019"
+
+---
 # How to structure css
 
 On my journey to becoming a better css developer I was always struggling to organize my files in a way that made it easier for other…

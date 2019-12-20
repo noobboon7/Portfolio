@@ -1,3 +1,9 @@
+---
+
+title: "Javascript basics"
+date: "November 23, 2019]"
+
+---
 # Javascript basics
 
 Hey all, I recently was asked about web development by a relative of mine who want to venture into coding. I really wasn’t able to break…

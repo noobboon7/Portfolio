@@ -1,3 +1,9 @@
+---
+
+title: "Using TTY-Prompt (gem), in a CLI App"
+date: "April 21, 2019"
+
+---
 # Using TTY-Prompt (gem), in a CLI App
 
 My first experience using a TTY-gem came from, when I had to make a CLI application for a project week, my third week in flatiron’s…

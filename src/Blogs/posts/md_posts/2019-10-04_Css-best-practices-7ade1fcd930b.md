@@ -1,3 +1,9 @@
+---
+
+title: "Css best practices"
+date: "October 4, 2019"
+
+---
 # Css best practices
 
 This blog post is intended for people getting started with css, and explains a high level overview of css.

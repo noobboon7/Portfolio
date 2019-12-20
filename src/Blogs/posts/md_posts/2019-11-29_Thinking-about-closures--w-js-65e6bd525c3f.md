@@ -1,3 +1,9 @@
+---
+
+title: "Thinking about closures w/js"
+date: "November 29, 2019"
+
+---
 # Thinking about closures w/js
 
 Hello worlds! Today I’m going to cover closures, an advanced Javascript topic which will help you write cleaner code; by understanding…

@@ -1,3 +1,9 @@
+---
+
+title: "Flexbox 💪🏼🟥 / cheatsheet"
+date: "November 9, 2019"
+
+---
 # Flexbox 💪🏼🟥 / cheatsheet
 
 PHEW!!Finally made it to flexbox! After being entrenched is massive amounts of sass code I’ve made to working with flexbox, and got to say…

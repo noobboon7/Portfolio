@@ -1,3 +1,9 @@
+---
+
+title: "Making a website responsive"
+date: "November 1, 2019"
+
+---
 # Making a website responsive
 
 In 2019 we are actively using our phones and other mobile devices to browse the interwebs. So, why is make a responsive website important…

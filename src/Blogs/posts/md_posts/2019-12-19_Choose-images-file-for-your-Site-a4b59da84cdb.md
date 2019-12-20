@@ -1,3 +1,9 @@
+---
+
+title: "Choose images file for your Site"
+date: "December 19, 2019"
+
+---
 # Choose images file for your Site
 
 Hello internet! Today I’m going to discuss images on a webpage and why svg are a great option for icons.

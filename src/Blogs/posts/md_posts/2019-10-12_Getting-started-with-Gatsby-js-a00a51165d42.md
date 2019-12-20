@@ -1,3 +1,9 @@
+---
+
+title: "Getting started with Gatsby.js"
+date: "October 12, 2019"
+
+---
 # Getting started with Gatsby.js
 
 Gatsby is a static site generator that uses graphql to make static queries. This blog will go over:
