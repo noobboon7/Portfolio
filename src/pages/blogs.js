@@ -30,15 +30,15 @@ const BlogPage = () => {
   return (
     <Layout>
       <Head title="Blogs"/>
-      <div >
-        <h1>Blogs</h1>
-        <ol>
+      <div className="blogs">
+        <h1 className="blogs__header">Blogs:</h1>
+        <ol className="blogs__posts">
           {blogs.map(blog => {
             return (
-              <li >
+              <li className="blogs__post">
                 <Link to={`/blog/${blog.node.fields.slug}`}>
-                  <h2>{blog.node.frontmatter.title}</h2>
-                  <p>{blog.node.frontmatter.date}</p>
+                  <h2 className="blogs__header-2">{blog.node.frontmatter.title}</h2>
+                  <p className="blogs__date">{blog.node.frontmatter.date}</p>
                 </Link>
               </li>
             )

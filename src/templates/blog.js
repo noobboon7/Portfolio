@@ -9,13 +9,13 @@ export const query = graphql`
     markdownRemark(fields: { slug: {eq: $slug}}) {
       frontmatter {
         title
-
+        date
       }
       html
     }
   }
 `
-
+ 
 const Blog = (props) => {
   const {frontmatter, html} = props.data.markdownRemark
   return(
