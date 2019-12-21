@@ -89,12 +89,18 @@ const IndexPage = () => {
 
 
       <section className="portfolio">
-        <h2>Project</h2>
+        <div className="projects">
 
-        <ul className="projects">
-          <li className="project"></li>
-        </ul>
+          <h2 className="projects__title">Projects</h2>
+
+          <div className="projects__gallery">
+            <figure className=" projects__gallery projects__gallery-card-1" > Budget Buddy</figure>
+            <figure className=" projects__gallery projects__gallery-card-2">Tv Tube</figure>
+            <figure className=" projects__gallery projects__gallery-card-3">Pig Game</figure>
+          </div>
+        </div>
       </section>
+
       </main>
 
     </Layout>

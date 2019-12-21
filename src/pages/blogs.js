@@ -25,11 +25,10 @@ const BlogPage = () => {
   `)
   const blogs = data.allMarkdownRemark.edges
 
-//////YOU NEED TO DOWNLOAD ALLMARKDOWN REMARK
 
   return (
     <Layout>
-      <Head title="Blogs"/>
+    <Head pageTitle="Blogs"/>
       <div className="blogs">
         <h1 className="blogs__header">Blogs:</h1>
         <ol className="blogs__posts">
@@ -37,8 +36,10 @@ const BlogPage = () => {
             return (
               <li className="blogs__post">
                 <Link to={`/blog/${blog.node.fields.slug}`}>
-                  <h2 className="blogs__header-2">{blog.node.frontmatter.title}</h2>
-                  <p className="blogs__date">{blog.node.frontmatter.date}</p>
+                  <div className="">
+                    <h2 className="blogs__header-2">{blog.node.frontmatter.title}</h2>
+                    <p className="blogs__date">{blog.node.frontmatter.date}</p>
+                  </div>
                 </Link>
               </li>
             )

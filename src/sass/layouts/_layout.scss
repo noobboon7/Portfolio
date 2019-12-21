@@ -7,14 +7,14 @@
 .header {
     z-index: 1;
     grid-row: head-start / head-end ;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.219);
 }
 
 .contanier {
     grid-row: body-start / body-end ;
    
     display: grid;
-    grid-template-rows: 91.8vh repeat(4, 1fr);
+    grid-template-rows: 91.8vh repeat(3, 1fr);
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     // overflow-y: scroll;
     // scroll-behavior: smooth;
