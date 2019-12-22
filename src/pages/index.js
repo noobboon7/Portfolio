@@ -1,4 +1,5 @@
 import React from "react";
+import { a } from "react-spring";
 
 // import Canvas from '../components/canvas'
 import Splash from '../components/splash'
@@ -17,7 +18,7 @@ const IndexPage = () => {
       <Head pageTitle="Home"/>
       <SEO title="Home" />
       
-      <main id ="container" className="contanier">
+      <a.main id ="indexContainer" className="contanier">
       
         <section className="splash">
           <h1 className="splash__text"> Hello worlds. I'm Jerry V. this is my site.</h1>
@@ -27,9 +28,9 @@ const IndexPage = () => {
           <Icon height="100" width="100" viewBox="0 0 1000 1000" fill="white" icon="DownArrow"/>
           </span>
         </section>
-
-        <section className="summary">
-        {/*Have backGround image of sky or video or animation */}
+{/* change classname to 'about' */}
+        <section id="aboutContainer" className="summary">
+{/*Have backGround image of sky or video or animation */}
           <ul className="svg">
 
             <li className="svg__icon">
@@ -88,7 +89,7 @@ const IndexPage = () => {
 
 
 
-      <section className="portfolio">
+      <section id="portfolioContainer" className="portfolio">
         <div className="projects">
 
           <h2 className="projects__title">Projects</h2>
@@ -101,7 +102,7 @@ const IndexPage = () => {
         </div>
       </section>
 
-      </main>
+      </a.main>
 
     </Layout>
   )

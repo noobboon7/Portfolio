@@ -1,5 +1,7 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import {  a } from "react-spring";
+
 import Head from '../components/head'
 import Layout from '../components/layout'
 
@@ -24,12 +26,12 @@ const BlogPage = () => {
     }
   `)
   const blogs = data.allMarkdownRemark.edges
-
+  // make custom hooks 
 
   return (
     <Layout>
     <Head pageTitle="Blogs"/>
-      <div className="blogs">
+      <a.div className="blogs">
         <h1 className="blogs__header">Blogs:</h1>
         <ol className="blogs__posts">
           {blogs.map(blog => {
@@ -45,7 +47,7 @@ const BlogPage = () => {
             )
           })}
         </ol>
-      </div>
+      </a.div>
     </Layout>
   )
 }
