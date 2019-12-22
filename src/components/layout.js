@@ -4,20 +4,22 @@ import {useSiteMetadata} from '../hooks/siteMetadata';
 
 import Header from "./header";
 import Footer from "./footer";
-// import "../sass/layouts/_layout.scss";
 import "../sass/main.scss";
 
 
-const Layout = (props) => {
+const Layout = ({children}) => {
+
   const {title} = useSiteMetadata()
 
-  return (
-    <div className = "layout">
+
+  return(
+        
+    <div className="layout">
       <Header siteTitle={title}/>
-      {props.children}
+      {children}
       <Footer/>
     </div>
   )
 }
 
-export default Layout
+export default Layout;

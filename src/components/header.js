@@ -1,20 +1,29 @@
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
+// import TransitionLink from 'gatsby-plugin-transition-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
+
 import React from "react";
 
 
-import logo from '../images/logo.png'
+// import logo from '../images/logo.png'
 import "../sass/main.scss";
 
-const Header = (props) => {
-
+const Header = ({siteTitle}) => {
+  
   return(
     <header className = "header">
-      <Link to="/"><img className="header header__logo" src={logo} alt="logo"/></Link>
+      <AniLink swipe direction="up"to="/">{siteTitle}</AniLink>
+      <AniLink fade to="/splash">splash Teaser</AniLink>
       
       <div className="links">
-      <Link className="header header__link" to="/about"> About </Link>
-      <Link className="header header__link" to="/contact"> Contact </Link>
-      <Link className="header header__link" to="/blogs"> Blogs </Link>
+      <AniLink swipe direction="up" className="header header__link" to="/about"> About </AniLink>
+
+      <AniLink swipe direction="down"className="header header__link" to="/contact"> Contact </AniLink>
+      
+       <AniLink cover className="header header__link" to="/blogs" duration={1}>
+          blogs
+        </AniLink>
       </div>
     </header>
   )

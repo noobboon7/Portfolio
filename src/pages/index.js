@@ -1,8 +1,7 @@
 import React from "react";
-import { a } from "react-spring";
 
 // import Canvas from '../components/canvas'
-import Splash from '../components/splash'
+// import Splash from '../components/splash'
 import Layout from "../components/layout"
 import Head from '../components/head'
 import SEO from "../components/seo"
@@ -18,16 +17,16 @@ const IndexPage = () => {
       <Head pageTitle="Home"/>
       <SEO title="Home" />
       
-      <a.main id ="indexContainer" className="contanier">
+      <main id ="indexContainer" className="contanier">
       
-        <section className="splash">
+        {/* <section className="splash">
           <h1 className="splash__text"> Hello worlds. I'm Jerry V. this is my site.</h1>
           <Splash className="canvas"/>
-          {/* onclick={() => } for span tag with spring transition */}
+          onclick={() => } for span tag with spring transition
           <span className="splash__arrow" >
           <Icon height="100" width="100" viewBox="0 0 1000 1000" fill="white" icon="DownArrow"/>
           </span>
-        </section>
+        </section> */}
 {/* change classname to 'about' */}
         <section id="aboutContainer" className="summary">
 {/*Have backGround image of sky or video or animation */}
@@ -102,7 +101,7 @@ const IndexPage = () => {
         </div>
       </section>
 
-      </a.main>
+      </main>
 
     </Layout>
   )

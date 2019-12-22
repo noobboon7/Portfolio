@@ -32,8 +32,19 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-transition-link`,
+
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
+
+    ////////////// plug-in removed in place for another///////////
     // `gatsby-plugin-offline`,
+    // {
+    //   resolve: `gatsby-plugin-layout`,
+    //   options: {
+    //     component: require.resolve(`./src/components/layout.js`),
+    //   },
+    // },
   ],
 }
