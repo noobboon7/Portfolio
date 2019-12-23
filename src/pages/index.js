@@ -91,7 +91,7 @@ const IndexPage = () => {
       <section id="portfolioContainer" className="portfolio">
         <div className="projects">
 
-          <h2 className="projects__title">Projects</h2>
+          <h2 className="projects__title projects__title--animated">Projects</h2>
 
           <div className="projects__gallery">
 
@@ -101,14 +101,16 @@ const IndexPage = () => {
                 &nbsp;
               </div>
 
-              <div className="card__heading">
-                <span className="card__heading-span card__heading-span--1">
+              <div className="card__details card__details--animated">
+
+                <span className="details__heading-span details__heading-span--1">
                   Budget Buddy
                 </span>
-              </div>
 
-              <div className="card__details">
-                React + redux + Ruby on Rails
+                <span className="details__sub">
+                  React + redux + Ruby on Rails
+                </span>
+
               </div>
 
             </div>

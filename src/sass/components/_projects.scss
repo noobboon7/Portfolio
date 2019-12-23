@@ -9,6 +9,11 @@
     color: #1b1515d2;
     grid-row: 1/2;
     grid-column: 5/6;
+
+    &--animated {
+      animation: moveInLeft 1s ease 1s ;
+
+    }
   }
 
   &__gallery {

@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   justify-items: center;
   width: 100%;
   color: #000000;
@@ -13,13 +14,25 @@
 .card__picture--1 {
   background-image: url(../assets/img/blub.jpg);
 }
-.card__heading-span {
-  font-size: 3rem;
-}
 .card__details {
   font-size: 2rem;
+  position: absolute;
+  left: 4rem;
+  top: 5rem;
+  z-index: 3;
+  transition: all 0.2s;
+}
+.card__details__heading-span {
+  display: block;
+  font-size: 3rem;
+}
+.card__details__sub {
+  display: block;
+}
+.card__details--animated {
+  transform: inherit;
+  animation: moveInTop 0.5s ease 0.8s;
 }
 .card:hover {
-  opacity: 0.5;
-  transform: translateY(-3px);
+  opacity: 0;
 }
