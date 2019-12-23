@@ -1,4 +1,3 @@
-// import { Link } from "gatsby";
 // import TransitionLink from 'gatsby-plugin-transition-link'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
@@ -14,14 +13,14 @@ const Header = ({siteTitle}) => {
   return(
     <header className = "header">
       <AniLink swipe direction="up"to="/">{siteTitle}</AniLink>
-      <AniLink fade to="/splash">splash Teaser</AniLink>
+      <AniLink fade to="/splash">Splash Teaser</AniLink>
       
       <div className="links">
       <AniLink swipe direction="up" className="header header__link" to="/about"> About </AniLink>
 
       <AniLink swipe direction="down"className="header header__link" to="/contact"> Contact </AniLink>
       
-       <AniLink cover className="header header__link" to="/blogs" duration={1}>
+       <AniLink cover top="entry" className="header header__link" to="/blogs" duration={.5}bg="#723">
           blogs
         </AniLink>
       </div>

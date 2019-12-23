@@ -11,9 +11,7 @@ const Layout = ({children}) => {
 
   const {title} = useSiteMetadata()
 
-
-  return(
-        
+  return( 
     <div className="layout">
       <Header siteTitle={title}/>
       {children}
