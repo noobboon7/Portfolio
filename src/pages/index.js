@@ -94,9 +94,32 @@ const IndexPage = () => {
           <h2 className="projects__title">Projects</h2>
 
           <div className="projects__gallery">
-            <figure className=" projects__gallery projects__gallery-card-1" > Budget Buddy</figure>
-            <figure className=" projects__gallery projects__gallery-card-2">Tv Tube</figure>
-            <figure className=" projects__gallery projects__gallery-card-3">Pig Game</figure>
+
+            <div className="card">
+
+              <div className="card__picture card__picture--1">
+                &nbsp;
+              </div>
+
+              <div className="card__heading">
+                <span className="card__heading-span card__heading-span--1">
+                  Budget Buddy
+                </span>
+              </div>
+
+              <div className="card__details">
+                React + redux + Ruby on Rails
+              </div>
+
+            </div>
+
+            <div className="card">
+              <div className="card--2">Tv Tube</div>
+            </div>
+
+            <div className="card">
+              <div className="card--3">Pig Game</div>
+            </div>
           </div>
         </div>
       </section>

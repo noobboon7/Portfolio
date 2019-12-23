@@ -1,0 +1,39 @@
+.card{
+  justify-items: center;
+  width: 100%;
+  color: #000000;
+  background-blend-mode: screen;
+  transition: all .2s ease;
+
+  &__picture{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+    // box-shadow: 0 1.5rem 4rem rgba($color-black, .15); on hover
+    &--1{
+      background-image:url(../assets/img/blub.jpg);
+
+    }
+    &--2{
+
+    }
+    &--3{
+
+    }
+  }
+
+  &__heading-span {
+    font-size: 3rem;
+
+  }
+
+  &__details {
+    font-size: 2rem;
+  }
+
+  &:hover {
+    opacity:0.5;
+    transform: translateY(-3px);
+  }
+}

@@ -1,0 +1,25 @@
+.card {
+  justify-items: center;
+  width: 100%;
+  color: #000000;
+  background-blend-mode: screen;
+  transition: all 0.2s ease;
+}
+.card__picture {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.card__picture--1 {
+  background-image: url(../assets/img/blub.jpg);
+}
+.card__heading-span {
+  font-size: 3rem;
+}
+.card__details {
+  font-size: 2rem;
+}
+.card:hover {
+  opacity: 0.5;
+  transform: translateY(-3px);
+}
