@@ -12,6 +12,12 @@
   width: 100%;
 }
 .card__picture--1 {
+  background-image: url(../assets/img/bb.png);
+}
+.card__picture--2 {
+  background-image: url(../assets/img/nexter.png);
+}
+.card__picture--3 {
   background-image: url(../assets/img/blub.jpg);
 }
 .card__details {
@@ -19,20 +25,21 @@
   position: absolute;
   left: 4rem;
   top: 5rem;
+  opacity: 0;
   z-index: 3;
   transition: all 0.2s;
 }
 .card__details__heading-span {
-  display: block;
   font-size: 3rem;
 }
 .card__details__sub {
-  display: block;
+  color: whitesmoke;
 }
-.card__details--animated {
-  transform: inherit;
-  animation: moveInTop 0.5s ease 0.8s;
-}
-.card:hover {
+.card:hover .card__picture {
   opacity: 0;
+  transform: translateY(-3px);
+}
+.card:hover .card__details {
+  animation: moveInTop ease 0.8s;
+  opacity: 1;
 }

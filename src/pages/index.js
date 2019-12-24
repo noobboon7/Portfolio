@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Head from '../components/head'
 import SEO from "../components/seo"
 import Icon from '../components/icon'
+import Card from '../components/projectCard'
 
 import "../sass/main.scss"
 
@@ -95,33 +96,21 @@ const IndexPage = () => {
 
           <div className="projects__gallery">
 
-            <div className="card">
-
-              <div className="card__picture card__picture--1">
-                &nbsp;
-              </div>
-
-              <div className="card__details card__details--animated">
-
-                <span className="details__heading-span details__heading-span--1">
-                  Budget Buddy
-                </span>
-
-                <span className="details__sub">
-                  React + redux + Ruby on Rails
-                </span>
-
-              </div>
-
-            </div>
-
-            <div className="card">
-              <div className="card--2">Tv Tube</div>
-            </div>
-
-            <div className="card">
-              <div className="card--3">Pig Game</div>
-            </div>
+            <Card num="1" 
+            name="Budget Buddy" 
+            stack="React + redux + Ruby on Rails " 
+            />
+            
+            <Card num="2" 
+            name="Nexter" 
+            stack="HTML + CSS " 
+            />
+            
+            <Card num="3"
+            name="N/A" 
+            stack="React + redux + Ruby on Rails " 
+            />
+            
           </div>
         </div>
       </section>
