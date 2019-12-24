@@ -1,6 +1,5 @@
 .card{
   position: relative;
-  justify-items: center;
   width: 100%;
   color: #000000;
   background-blend-mode: screen;
@@ -11,24 +10,23 @@
     height: 100%;
     width: 100%;
 
-    // box-shadow: 0 1.5rem 4rem rgba($color-black, .15); on hover
     &--1{
       background-image:url(../assets/img/bb.png);
     }
-
+    
     &--2{
       background-image:url(../assets/img/nexter.png);
     }
-
+    
     &--3{
       background-image:url(../assets/img/blub.jpg);
     }
   }
-
+  
   &__details {
     font-size: 2rem;
     position: absolute;
-    left: 4rem;
+    left: 6rem;
     top: 5rem;
     opacity: 0;
     z-index: 3;
@@ -48,14 +46,18 @@
     
   }
   
+  &:hover {
+    // box-shadow: 0 1.5rem 4rem rgba($color-dark, .15); 
+    box-shadow: 1.2rem 1.2rem .2rem .1rem rgba(0, 0, 255, .2);
+  }
+
   &:hover .card__picture{
     opacity:0;
-    // box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
     transform: translateY(-3px);
-    
   }
+
   &:hover .card__details {
-    animation: moveInTop  ease .8s;
+    animation: moveInTop  ease .7s;
     opacity: 1;
   }
 }

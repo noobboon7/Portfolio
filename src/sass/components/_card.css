@@ -1,6 +1,5 @@
 .card {
   position: relative;
-  justify-items: center;
   width: 100%;
   color: #000000;
   background-blend-mode: screen;
@@ -23,7 +22,7 @@
 .card__details {
   font-size: 2rem;
   position: absolute;
-  left: 4rem;
+  left: 6rem;
   top: 5rem;
   opacity: 0;
   z-index: 3;
@@ -35,11 +34,14 @@
 .card__details__sub {
   color: whitesmoke;
 }
+.card:hover {
+  box-shadow: 1.2rem 1.2rem 0.2rem 0.1rem rgba(0, 0, 255, 0.2);
+}
 .card:hover .card__picture {
   opacity: 0;
   transform: translateY(-3px);
 }
 .card:hover .card__details {
-  animation: moveInTop ease 0.8s;
+  animation: moveInTop ease 0.7s;
   opacity: 1;
 }

@@ -1,11 +1,7 @@
-// import TransitionLink from 'gatsby-plugin-transition-link'
-import AniLink from "gatsby-plugin-transition-link/AniLink";
-
-
 import React from "react";
 
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-// import logo from '../images/logo.png'
 import "../sass/main.scss";
 
 const Header = ({siteTitle}) => {

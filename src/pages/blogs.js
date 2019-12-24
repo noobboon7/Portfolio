@@ -1,34 +1,17 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 
 import Head from '../components/head'
 import Layout from '../components/layout'
+import { useBlogMD } from '../hooks/markdownData'
 
 
 
 const BlogPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              title
-              date
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
-  const blogs = data.allMarkdownRemark.edges
-  // make custom hooks 
-
+  const blogs = useBlogMD()
+  
   return (
     <Layout>
     <Head pageTitle="Blogs"/>
@@ -37,9 +20,9 @@ const BlogPage = () => {
         <ol className="blogs__posts">
           {blogs.map(blog => {
             return (
-              <li className="blogs__post">
+              <li className="blogs__post" key={blog.node.id}>
                 <AniLink swipe direction="left" to={`/blog/${blog.node.fields.slug}`}>
-                  <div className="">
+                  <div className="" >
                     <h2 className="blogs__header-2">{blog.node.frontmatter.title}</h2>
                     <p className="blogs__date">{blog.node.frontmatter.date}</p>
                   </div>
@@ -53,4 +36,4 @@ const BlogPage = () => {
   )
 }
 
-export default BlogPage
+export default BlogPage;

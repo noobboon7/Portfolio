@@ -19,16 +19,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       
       <main id ="indexContainer" className="contanier">
-      
-        {/* <section className="splash">
-          <h1 className="splash__text"> Hello worlds. I'm Jerry V. this is my site.</h1>
-          <Splash className="canvas"/>
-          onclick={() => } for span tag with spring transition
-          <span className="splash__arrow" >
-          <Icon height="100" width="100" viewBox="0 0 1000 1000" fill="white" icon="DownArrow"/>
-          </span>
-        </section> */}
-{/* change classname to 'about' */}
+                          {/* change classname to 'about' */}
         <section id="aboutContainer" className="summary">
 {/*Have backGround image of sky or video or animation */}
           <ul className="svg">
@@ -103,7 +94,7 @@ const IndexPage = () => {
             
             <Card num="2" 
             name="Nexter" 
-            stack="HTML + CSS " 
+            stack="HTML + CSS" 
             />
             
             <Card num="3"
