@@ -34,6 +34,12 @@
 .card__details__sub {
   color: whitesmoke;
 }
+.card__btn {
+  opacity: 0;
+  position: absolute;
+  left: 10rem;
+  bottom: 6rem;
+}
 .card:hover {
   box-shadow: 1.2rem 1.2rem 0.2rem 0.1rem rgba(0, 0, 255, 0.2);
 }
@@ -43,5 +49,9 @@
 }
 .card:hover .card__details {
   animation: moveInTop ease 0.7s;
+  opacity: 1;
+}
+.card:hover .card__btn {
+  animation: moveInBottom ease 0.7s;
   opacity: 1;
 }

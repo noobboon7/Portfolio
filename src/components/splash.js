@@ -1,9 +1,9 @@
-import React, { useRef, useMemo } from 'react'
+import React, { useRef, useMemo, Suspense } from 'react'
 import * as THREE from 'three';
 import { Canvas, extend, useThree, useRender } from "react-three-fiber";
 import { a } from 'react-spring/three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import Moon from './3dMoon'
+// import Moon from './3dMoon'
 
 
 extend({OrbitControls})
@@ -47,6 +47,7 @@ const Stars = () => {
   }
 
 const Splash = () => {
+const Moon = React.lazy(()=> import('./3dMoon'))
 
     return(
         <Canvas camera={{position: [10,10,50]}} onCreated={({gl}) => {
@@ -55,7 +56,9 @@ const Splash = () => {
         }}>
             <fog attach="fog" args={["lightgrey", 300 , 300]} />
             <Controls/>
+            <Suspense fallback="loading">
             <Moon/>
+            </Suspense>
             <Stars/>
         </Canvas>
     )

@@ -1,6 +1,12 @@
 import React from 'react'
+import Button from './button'
+import Modal from './modal'
+import useModal from '../hooks/useModal';
 
-const Card = ({name, num, stack }) => (
+const Card = ({name, num, stack }) => {
+  const {isShowing, toggle} = useModal();
+
+  return(
   <div className="card">
 
     <div className={"card__picture card__picture--" + num}>
@@ -19,7 +25,18 @@ const Card = ({name, num, stack }) => (
 
     </div>
 
+    <div className="card__btn">
+    {/* <button className="button-default" onClick={toggle}>Show Modal</button> */}
+      <Button projectName={name} clsNum={num} togl={toggle} />
+      <Modal
+        isShowing={isShowing}
+        hide={toggle}
+      />
+    </div>
+
   </div>
-)
+  )
+
+}
 
 export default Card;
