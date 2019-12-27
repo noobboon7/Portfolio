@@ -1,35 +1,10 @@
-// import React from 'react'
-
-// export const Modal = ({num, img, title}) => (
-//   <div id={"Modal-" title} className= "popupContainer">
-//     <div className={"popup__content" + num}>
-//       <div className="popup__top">
-        
-//         {/* make carasoul and video demo */}
-//         <img src={img} alt={title}/>
-
-//       </div>
-
-//       <div className="popup__bottom">
-//         <span>
-
-//         </span>
-//         <p>
-
-//         </p>
-//       </div>
-//     </div>
-// {/* think about rename the image neam for the title to match the prject name so you can
-//   dynamically change it with onw popup jsx tag  */}    
-
-//   </div>
-// )
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Modal = ({ isShowing, hide }) => isShowing ? ReactDOM.createPortal(
-  <React.Fragment>
+// Portals allow React components to render in another part of the DOM that is outside of their parent component.
+// Portal to mount our Modal component to the end of the document.body element, rather than as a child of another component.
+const Modal = ({ isShowing, hide, projectName, descrp, stat }) => isShowing ? ReactDOM.createPortal(
+  <>
     <div className="modal-overlay"/>
     <div className="modal-wrapper" aria-modal aria-hidden tabIndex={-1} role="dialog">
       <div className="modal">
@@ -38,12 +13,14 @@ const Modal = ({ isShowing, hide }) => isShowing ? ReactDOM.createPortal(
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+        <h2>{projectName}</h2>
         <p>
-          Hello, I'm a modal.
+          {descrp}
         </p>
+        <p>Status: {stat}</p>
       </div>
     </div>
-  </React.Fragment>, document.body
+  </>, document.body
 ) : null;
 
 export default Modal;

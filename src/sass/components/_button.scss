@@ -40,7 +40,7 @@
   }
 
   &:hover {
-    background-color: $color-primary;
+    background-color: rgba($color-primary, .6);
     color: whitesmoke;
     box-shadow: 0 1rem 2rem rgba($color-dark, .15);
     transform: translateY(-2px);

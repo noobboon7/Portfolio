@@ -9,14 +9,6 @@
     grid-row: head-start / head-end ;
 }
 
-.contanier {
-    grid-row: body-start / body-end ;
-   
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-}
-
 .footer {
     grid-row: footer-start / footer-end;
 }

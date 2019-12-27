@@ -1,7 +1,11 @@
 .projects {
   background-color: crimson;
+  background-image: url(../assets/img/mount3.jpg);
+  background-size: cover;
+
   display: grid;
   grid: repeat(4, minmax(20rem, 1fr)) 6rem / minmax(6rem, 3%) repeat(7, 1fr) minmax(6rem, 3%);
+  
   &__title {
     justify-self: center;
     align-self: center;

@@ -1,49 +1,8 @@
-.summary {
-  grid-column: sidebar-start / full-end;
-  grid-row: 1/2;
-  background-image: url(../assets/img/sky.jpg);
-  background-size: cover;
-  // background-color: skyblue;
-  // scroll-snap-align: center;
-
+.contanier {
+  grid-row: body-start / body-end ;
   display: grid;
-  grid-template-rows: max-content max-content;
-  // grid-template-columns: repeat(3, 1fr);
-
-  gap: 1.5rem;
-
-  .svg {
-    grid-column: 1/-1;
-    list-style: none;
-
-    display: grid;
-    grid: repeat(2, 1fr) / repeat(5, 1fr);
-    gap: 4rem;
-    align-items: center;
-    justify-items: center;
-    margin-top: 3rem;
-
-    font-size: 3rem;
-
-
-    &__icon {
-      height: 5rem;
-      width: 5rem;
-    }
-  }
-
-  &__description {
-    color: $color-dark;
-    padding: 1.5rem;
-    font-size: 2rem;
-    text-align: center;
-    align-self: center;
-    justify-self: center;
-    grid-column: 1/-1;
-    grid-row: 3/4;
-
-  }
-  
+  grid-template-rows: 120rem 1fr;
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
 .portfolio {
