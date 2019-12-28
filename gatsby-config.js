@@ -4,7 +4,8 @@ module.exports = {
     description: `This is my portfolio. I was determinded to learn a new "stack" so I decide ventur into technologies I wanted to learn. One thing lead to another and now I'm building a gatsby site. This is a display of my work I've done through my new journey as a web developer.`,
     author: `Jerry Velazquez`,
     headline: `express the inexpressable`,
-    image: `./src/assets/img/logo.png`
+    logo: `./src/assets/img/logo.png`,
+    me: `./src/assets/img/me.jpg`,
   },
 
   plugins: [
@@ -22,7 +23,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Portfolio`,
+        name: `Jerry's Portfolio`,
         short_name: `Portfolio`,
         start_url: `/splash`,
         background_color: `#663399`,
@@ -38,8 +39,9 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
 
-    ////////////// plug-in removed in place for another///////////
     // `gatsby-plugin-offline`,
+    
+    ////////////// plug-in removed in place for another///////////
     // {
     //   resolve: `gatsby-plugin-layout`,
     //   options: {

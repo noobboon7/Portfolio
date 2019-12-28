@@ -1,7 +1,5 @@
 import React from "react";
 
-// import Canvas from '../components/canvas'
-// import Splash from '../components/splash'
 import Layout from "../components/layout"
 import Head from '../components/head'
 import SEO from "../components/seo"
@@ -17,11 +15,11 @@ const IndexPage = () => {
   return(
     <Layout>
       <Head pageTitle="Home"/>
-      <SEO title="Home" />
+      <SEO title="Home"/>
 
       <main id ="indexContainer" className="contanier">
 
-         <AboutSection/>
+        <AboutSection/>
 
         <section id="portfolioContainer" className="portfolio">
           <ProjectSection/>

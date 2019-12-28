@@ -4,8 +4,9 @@
   grid-row: 1/2;
   background-image: url(../assets/img/sky.jpg);
   background-size: cover;
+  color: black;
  
-  // new grid in section for your drunk self 
+  // new grid in section 
   display: grid;
   grid-template-rows: 10% repeat(3, 28%);
   
@@ -20,7 +21,8 @@
     // new grid for badges
     display: grid;
     grid: 1fr / repeat(4, 1fr) ;
-    gap: 1rem 
+    gap: 2rem; 
+    margin: 0 1rem;
   }
 
   &__badge {
@@ -31,28 +33,27 @@
       // width: 100%;
       justify-items: center;
       align-items: center;
-      box-shadow: 0 3px 3px $color-dark;
+      box-shadow: 0px 0px 30px rgba(200,196,219,.3);
       border-radius: 3px;
 
     }
 
     &-background-icon {
-      // badge background
       width: 0;
       height: 0;
-      border: 13rem solid transparent;
+      border: 11rem solid transparent;
       border-bottom: 10rem solid $color-primary;
       position: relative;
-      top: -13rem;
+      top: -11rem;
       
       &:after {
         content: '';
         position: absolute;
-        left: -13rem;
+        left: -11rem;
         top: 10rem;
         width: 0;
         height: 0;
-        border: 13rem solid transparent;
+        border: 11rem solid transparent;
         border-top: 10rem solid $color-primary;
       }
     }
@@ -63,34 +64,58 @@
       top: 5rem;
       left: -5rem;
     }
-    // &--1{grid-row: 1/2;}
-    // &--2{grid-row: 2/3;}
-    // &--3{grid-row: 3/4;}
-    // &--4{grid-row: 4/5;}
 
     &-skill {
       grid-row: 2/3;
       font-size: 2.5rem;
     }
+
     &-description {
       grid-row: 3/4;
       font-size: 2rem;
-
+      padding-left: 2.5rem;
     }
   }
 
   &__description {
     grid-row: 3/4;
     grid-column: 1/-1;
-    color: $color-dark;
-    padding: 1.5rem;
+
+    display: grid;
+    grid: 80% 1fr / 35% 1fr;
+    padding: 0 1.5rem ;
     font-size: 2rem;
-    text-align: center;
-    align-self: center;
-    justify-self: center;
+    justify-items: center;
+    align-items: center;
+    
+    &-photo {
+      grid-row: 1/2;
+      top: 5rem;
+      height: 100%;
+      width: 100%;
+      background-image: url(../assets/img/me.jpg);
+      background-size: cover;
+    }
+    &-media {
+      grid-column: 1/2;
+      grid-row: 2/3;
+
+      display: grid;
+      grid: 1fr/ repeat(4, 25%);
+      gap: 1rem;
+      height: 2rem;
+      width: 12rem;
+      padding-bottom: 7rem;
+      padding-right: 2rem;
+    }
+
+    &-p {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
   }
 
-  .svg {
+.svg {
     grid-column: 1/-1;
     list-style: none;
 
@@ -108,4 +133,29 @@
       width: 5rem;
     }
   }
+}
+
+.hexa, .hexa div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+.hexa {
+  width: 325px;
+  height: 230px;
+}
+.hexa div {
+  width: 100%;
+  height: 100%;
+}
+.hexa {
+  transform: rotate(120deg);
+}
+.hex1 {
+  transform: rotate(-60deg);
+}
+.hex2 {
+  transform: rotate(-60deg);
 }

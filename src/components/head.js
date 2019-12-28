@@ -8,7 +8,6 @@ const Head = ({pageTitle}) => {
   
   const {title} = useSiteMetadata()
   
-// have to figure how to output right info
   return(
 
     <Helmet title={`${pageTitle} | ${title}`}/>

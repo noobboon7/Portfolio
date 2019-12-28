@@ -9,7 +9,8 @@ export const useSiteMetadata = () => {
             title
             headline
             description
-            image
+            logo
+            me
           }
         }
       }
