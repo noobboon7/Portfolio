@@ -8,16 +8,42 @@ const AboutSection = () => (
       About
     </h2>
 
-    <div className="about__badges">
-      <div className="about__badge about__badge--1">
+    <div className="about__badges ">
+      <div className="about__badge-container ">
 
-        <div className="about__badges-icon ">
-        <Icon viewBox="0 0 1024 1024" fill="rgb(225, 0, 152)" icon="Bubble" width="100" height="100"/>
+        <div className="about__badge-background-icon ">
+          <span className="about__badge-icon">
+            <Icon viewBox="0 0 1024 1024" fill="rgb(225, 0, 152)" icon="HTTP" height="10rem" width="10rem" />
+          </span>
         </div>
 
-        <h3 className="about__badges-skill">HTTP & REST</h3>
+        <h3 className="about__badge-skill">HTTP and REST</h3>
 
-        <p className="about__badges-description">description</p>
+        <p className="about__badge-description">Obtain data, or generate operations throught HTTP. Allow Backend to understand the Frontend.</p>
+      </div>
+      <div className="about__badge-container ">
+
+        <div className="about__badge-background-icon ">
+          <span className="about__badge-icon">
+            <Icon viewBox="0 0 1024 1024" fill="rgb(225, 0, 152)" icon="Database" height="10rem" width="10rem" />
+          </span>
+        </div>
+
+        <h3 className="about__badge-skill">Databases and Web Storage</h3>
+
+        <p className="about__badge-description">Catch memory storage, relational databases</p>
+      </div>
+      <div className="about__badge-container ">
+
+        <div className="about__badge-background-icon ">
+          <span className="about__badge-icon">
+            <Icon viewBox="0 0 1024 1024" fill="rgb(225, 0, 152)" icon="Git" height="10rem" width="10rem" />
+          </span>
+        </div>
+
+        <h3 className="about__badge-skill">Git Version Control</h3>
+
+        <p className="about__badge-description">Obtain data, or generate operations throught HTTP. Allow Backend to understand the Frontend.</p>
       </div>
     </div>
 

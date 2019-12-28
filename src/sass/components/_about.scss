@@ -1,14 +1,13 @@
 .about {
+  
   grid-column: sidebar-start / full-end;
   grid-row: 1/2;
   background-image: url(../assets/img/sky.jpg);
   background-size: cover;
  
-
+  // new grid in section for your drunk self 
   display: grid;
   grid-template-rows: 10% repeat(3, 28%);
-  
-  // gap: 1.5rem;
   
   &__heading {
     grid-row: 1/2;
@@ -18,37 +17,66 @@
   
   &__badges {
     grid-row: 2/3;
+    // new grid for badges
     display: grid;
     grid: 1fr / repeat(4, 1fr) ;
-    justify-items: center;
+    gap: 1rem 
   }
+
   &__badge {
-    display: grid;
-    grid-template-rows: 40% 1fr 30%;
 
-    font-size: 2rem;
-    // badge background
-    width: 0;
-    height: 0;
-    border: 12rem solid transparent;
-    border-bottom: 10rem solid $color-primary;
-    position: relative;
-    top: -12rem;
+    &-container {
+      display: grid;
+      grid-template-rows: 55% 1fr 30%;
+      // width: 100%;
+      justify-items: center;
+      align-items: center;
+      box-shadow: 0 3px 3px $color-dark;
+      border-radius: 3px;
 
-    &:after {
-      content: '';
-      position: absolute;
-      left: -12rem;
-      top: 10rem;
+    }
+
+    &-background-icon {
+      // badge background
       width: 0;
       height: 0;
-      border: 12rem solid transparent;
-      border-top: 10rem solid $color-primary;
+      border: 13rem solid transparent;
+      border-bottom: 10rem solid $color-primary;
+      position: relative;
+      top: -13rem;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        left: -13rem;
+        top: 10rem;
+        width: 0;
+        height: 0;
+        border: 13rem solid transparent;
+        border-top: 10rem solid $color-primary;
+      }
     }
-    &--1{}
-    &--2{}
-    &--3{}
-    &--4{}
+
+    &-icon {
+      position: relative;
+      z-index: 3;
+      top: 5rem;
+      left: -5rem;
+    }
+    // &--1{grid-row: 1/2;}
+    // &--2{grid-row: 2/3;}
+    // &--3{grid-row: 3/4;}
+    // &--4{grid-row: 4/5;}
+
+    &-skill {
+      grid-row: 2/3;
+      font-size: 2.5rem;
+    }
+    &-description {
+      grid-row: 3/4;
+      font-size: 2rem;
+
+    }
   }
 
   &__description {
@@ -60,7 +88,6 @@
     text-align: center;
     align-self: center;
     justify-self: center;
-
   }
 
   .svg {
@@ -76,12 +103,9 @@
 
     font-size: 3rem;
 
-
     &__icon {
       height: 5rem;
       width: 5rem;
     }
   }
-
-  
 }
