@@ -6,7 +6,6 @@ date: "November 1, 2019"
 ---
 # Making a website responsive
 
-In 2019 we are actively using our phones and other mobile devices to browse the interwebs. So, why is make a responsive website important…
 
 ![](https://cdn-images-1.medium.com/max/800/0*GlMtcKj5TOHv5p8i.png)
 
@@ -23,7 +22,7 @@ To start you can place the meta tag above in the head tag of your HTML5 file. Th
 #### Css Media queries
 
 **_NOTE:_** _Css media queries are bit more content specific; the code snippets belows are contrived examples in sass._
-
+```
 // Media Query Manager
 
 /\*
@@ -49,9 +48,10 @@ $Breakpoint arguement choices:
 \- big desktop
 
 \*/
+```
 
 Above is a reference point that I like to look at when creating a responsive site.
-
+```
 //mixins.scss
 
 @mixin respond($breakpoint) {
@@ -81,9 +81,10 @@ Above is a reference point that I like to look at when creating a responsive sit
   }
 
 }
+```
 
 So for this example I’m using a mixin instead of writing the same css and will import that into another file where the global styling of my site will be.
-
+```
 // base.scss
 
 html {
@@ -117,7 +118,7 @@ html {
   }
 
 }
-
+```
 In the code snippet above a we made this site response to the tablet screens in portrait and landscape views. We also show the css that this would translate into.
 
 Now that you have an idea of what goes into making a responsive website, it doesn’t seem like a monumental task… at least I thought it was, when I didn’t know how make a page responsive. The idea behind responsive web design is to make the content of the site readily available to a user on any screen. that all, pretty simple huh. 😁

@@ -6,10 +6,9 @@ date: "May 8, 2019"
 ---
 # What to expect from your 5G network.
 
-How much more speed can you can expect.
 
 ![Shutterstock photo of 5g](https://cdn-images-1.medium.com/max/800/1*fzYVGycAHVYicprPZFMoNA.jpeg)
-Shutterstock photo of 5g
+#####Shutterstock photo of 5g
 
 Whoa! can you believe it the future of networking is here; the next-generation standard for wireless communications are set to start taking over the mobile network environment in 2019, with rollout already happening in south korea and the US.
 
@@ -23,7 +22,7 @@ So what does this mean for you…
 
 One of 5G’s main advantages is speed; with data transfer speeds up to 100 times faster than 4G (up to 20 gigabits per second) and latency under a millisecond( least in ideal conditions). Also, 5G can handle more users, with estimates up to a million devices in a single square kilometer; in “technical terms”, we are getting more bandwidth. This means less congestion on the network connection in a crowded area.
 
-[https://media.giphy.com/media/nX9xqW0jpsGgE/source.gif](https://media.giphy.com/media/nX9xqW0jpsGgE/source.gif)
+![https://media.giphy.com/media/nX9xqW0jpsGgE/source.gif](https://media.giphy.com/media/nX9xqW0jpsGgE/source.gif)
 
 These new capabilities are possible due to 5G using ultra-high frequencies, mmWave technology, and spatial beamforming. Lower frequency bands cover much greater distances but have limited data speeds. However, high-frequency bands can only cover smaller areas but can send and receive much more data.
 
@@ -41,7 +40,7 @@ These new capabilities are possible due to 5G using ultra-high frequencies, mmWa
 
 #### Conclusion
 
-[https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy-downsized.gif](https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy-downsized.gif)
+![https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy-downsized.gif](https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy-downsized.gif)
 
 5G is an awesome upgrade for our network connectivity, but we won’t be experiencing it to its fullest capacity until the infrastructure it set in place. Also, check out this really cool video below, about what is to come with 5G.
 

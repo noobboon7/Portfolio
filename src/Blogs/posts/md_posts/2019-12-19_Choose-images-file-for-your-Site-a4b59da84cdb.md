@@ -6,9 +6,8 @@ date: "December 19, 2019"
 ---
 # Choose images file for your Site
 
-Hello internet! Today I’m going to discuss images on a webpage and why svg are a great option for icons.
 
-![](https://cdn-images-1.medium.com/max/2560/0*W9TtMc7EVyrO-i0D.png)
+![](https://cdn-images-1.medium.com/max/1200/0*W9TtMc7EVyrO-i0D.png)
 
 Hello internet! Today I’m going to discuss images on a webpage and why svg are a great option for icons.
 
@@ -23,7 +22,7 @@ When creating your website or apps you with start to work with many different im
 #### Portable Network Graphic (PNG)
 
 ![PNG](https://cdn-images-1.medium.com/max/800/0*SqZH9vtPgpXz8Css)
-PNG
+#####PNG
 
 **Pros:**
 
@@ -44,7 +43,7 @@ One of the best use case I’ve seen it being used in is as a logo.
 #### **Joint Photographic Expert Group (**JPEG)
 
 ![JPEG](https://cdn-images-1.medium.com/max/800/0*tGQ5b6MqSQwWowJ0)
-JPEG
+#####JPEG
 
 **Pros:**
 
@@ -64,7 +63,7 @@ JPEG
 #### Scalable Vector Graphics(SVG)
 
 ![SVG](https://cdn-images-1.medium.com/max/800/0*kqsLWiEIB7-Jx3w9)
-SVG
+#####SVG
 
 **Pros😊:**
 

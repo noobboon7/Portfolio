@@ -6,7 +6,6 @@ date: "December 14, 2019"
 ---
 # React-Three-Fiber
 
-Hey all! I am super excited this week, because I’m finally getting around to finishing my portfolio and displaying the tech I’ve been…
 
 ![](https://cdn-images-1.medium.com/max/1200/0*D4Vdy6ZQkDbsJ6c5.jpeg)
 
@@ -19,13 +18,13 @@ In this blog, I’m going to try and set you up with some very fundamental knowl
 #### NPM install
 
 Depending on which package manager you use in react will determine the syntax you use. In my example below I will be using NPM.
-
+```
 npm install three react-three-fiber react-spring(optional)
-
+```
 I personal just started using react-spring for the physic of objects in the animation; however, installing `react-spring` as dependency is optional.
 
 #### Importing
-
+```
 import React, { useState, useRef, useEffect } from 'react'
 
 import \* as THREE from 'three';
@@ -35,9 +34,9 @@ import { Canvas, extend, useThree, useRender } from "react-three-fiber";
 import { useSpring, a } from 'react-spring/three'
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-
+```
 When successfully installing dependencies, you should then import like so…afterwards creating a canvas for your three js is made easier now with the help of `react-three-fiber`. Just create a component where the canvas will live and export the module so you can use it wherever you may see fit.
-
+```
 const Module = () => {
 
  return(
@@ -55,16 +54,16 @@ const Module = () => {
 }
 
 export default Module;
-
+```
 Alternatively, you can also import a canvas by itself and create separate component, then import them into the file that has the canvas.
 
 #### Creating an object
 
 ![box created using THREE.js](https://cdn-images-1.medium.com/max/800/1*tzALNeclN2QxqTE-5lq4DA.png)
-box created using THREE.js
+#####box created using THREE.js
 
 In the code below you will see the component that creates a box object to the screen.
-
+```
 const Box = () => {  
 /\* React hooks
 
@@ -105,7 +104,7 @@ const Box = () => {
  )
 
 }
-
+```
 OK! let’s walk through this component… at the very top I’m using hooks to change the state of the box, based on mouse events. If clicked the box grows larger and on hovering the mouse over the box it changes color to green, and when not hovered its default state is grey.
 
 I then use a JSX mesh tag to wrap the object and pass in the properties I want it to have; note the lowercase `a.`, this is telling my mesh to use animation on changes to the object.
@@ -116,7 +115,7 @@ Inside the mesh the boxBufferGeometry tag is responsible for creating my geometr
 
 I had a difficult time trying to get anything on the page on my own, but with help from youtube I was able to get started using Three js. I will leave some useful links below that helped me grasp these concepts… I love using this new tech, but I’m still discovering it as I continue to use it. I really hope this article was helpful, and if you did find it helpful feel free to give it some likes/claps. Happy coding!
 
-Learn with Jason
+
 
 [**react-spring/react-three-fiber**  
 _These demos are real, you can click them! They contain the full code, too. npm install three react-three-fiber This is…_github.com](https://github.com/react-spring/react-three-fiber "https://github.com/react-spring/react-three-fiber")[](https://github.com/react-spring/react-three-fiber)

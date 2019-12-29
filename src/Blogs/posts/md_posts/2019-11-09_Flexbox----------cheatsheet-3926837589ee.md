@@ -6,7 +6,6 @@ date: "November 9, 2019"
 ---
 # Flexbox 💪🏼🟥 / cheatsheet
 
-PHEW!!Finally made it to flexbox! After being entrenched is massive amounts of sass code I’ve made to working with flexbox, and got to say…
 
 ![](https://cdn-images-1.medium.com/max/800/0*ypKQrcnWi_jiZulq.png)
 
@@ -26,14 +25,14 @@ The main idea behind flexbox is to give the container the ability to expand and 
 #### Concept
 
 ![display: flex](https://cdn-images-1.medium.com/max/800/0*mimtQsp6DMLguQYD.png)
-display: flex
+#####display: flex
 
 When setting a property to display “flex” on a(n)container you are also defaulting the items inside that container to the main axis. Keep in mind that when working with flexbox we only work on direction at a time. The main axis being the X axis and the cross is your Y Axis.
 
 #### Syntax/Cheatsheet
 
 Here is some of the most important syntax, in my opinion, that you’ll be using to create layouts with flexbox. Think about this more like a cheatsheet😁🤓.
-
+```
 //container properties 
 
 flex-direction: row /\*X-axis\*/| row-reverse | column /\*Y-axis\*/| column-reverse
@@ -59,6 +58,7 @@ flex-shrink: 1| <integer>
 flex-basis: auto| <length>
 
 or just flex: 0 1 auto
+```
 
 ![](https://cdn-images-1.medium.com/max/800/1*ZZREVSPxe5Ll9U28dF6LPA.png)
 

@@ -6,10 +6,8 @@ date: "November 23, 2019]"
 ---
 # Javascript basics
 
-Hey all, I recently was asked about web development by a relative of mine who want to venture into coding. I really wasn’t able to break…
-
 ![Javascript logo](https://cdn-images-1.medium.com/max/800/0*pP9BLZTsfS71EhdM.jpg)
-Javascript logo
+#####Javascript logo
 
 Hey all, I recently was asked about web development by a relative of mine who want to venture into coding. I really wasn’t able to break down what I was doing in the console without having to explain some of the basics to him. So, in this blog I’m going to go over some fundamental that make Javascript run under the hood.
 

@@ -3,13 +3,15 @@
   background-color: rgba(227, 241, 229, 0.233);
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 740px 1fr; 
+
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   
-
-
   &__content {
+  grid-column: 2;  
 
     display: grid;
     grid-column: 2/3;
+    justify-content: center;
     justify-items: center;
     align-items: center;
     gap: 1rem;
@@ -28,29 +30,29 @@
       justify-self: left;
       font-size: 3rem;
     }
-    
+    blockquote   {   
+      padding-left: 10px;  
+      color: #666;  
+      border-left: 3px solid black;  
+    }
     code {
       justify-self: center;
-      font-size: 1rem;
+      font-size: 1.5rem;
+      background-color: rgba(221, 216, 216, 0.719);
     }
     p {
       font-size: 2rem;
     }
     ul {
-      font-size: 3rem;
+      font-size: 2rem;
+    }
+    ol {
+      font-size: 2rem;
     }
   }
 }
-// article > \* {  
-//   grid-column: 2;  
-// }
+
 // article > figure {  
 //   grid-column: 1 / -1;  
 //   margin: 20px 0;  
-// }
-// article > blockquote {  
-//   grid-column: 3 / 5;  
-//   padding-left: 10px;  
-//   color: #666;  
-//   border-left: 3px solid black;  
 // }

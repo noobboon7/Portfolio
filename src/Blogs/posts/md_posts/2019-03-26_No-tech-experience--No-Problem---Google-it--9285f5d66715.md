@@ -6,14 +6,12 @@ date: "March 26, 2019"
 
 # No tech experience. No Problem. Google it!
 
-When I first starting to learning code, I thought my head was going to explode, and immediately I thought “only computer geniuses could do…
-
 ![](https://cdn-images-1.medium.com/max/800/1*wGVYsQFfAq-Kw6Tn6bsncA.png)
 
 When I first starting to learning code, I thought my head was going to explode, and immediately I thought “only computer geniuses could do this kind of work!?”
 
 ![car bomb goodbye GIF](https://cdn-images-1.medium.com/max/600/1*r3r970-RxU075O0bITPDoQ.gif)
-car bomb goodbye GIF
+#####car bomb goodbye GIF
 
 I hadn’t even started my started my immersive bootcamp yet, and I was ready to quit! Until, I remembered what my friends from the Dev community told me about their troubleshooting process, “if you don’t know what to do, just GOOGLE IT!. . . you’ll soon realize how important google is going to be in your career as a developer”. I was a bit shocked to hear google’ing was all I had to do, in order to become a savvy developer. Although, google is a very helpful tool for questions like the what is the like today weather? or how is my commute?; I did not bother to think that this was a source of truth for coding queries. However, google may not always give you exactly what you are looking for, but you can alway come pretty close to an answer. So, how do you narrow down you searches and cut down search time so you can get more coding done?
 
@@ -29,7 +27,7 @@ Again, Google it! Hooray! I was able to find the method “.map” with the keyw
 
 There are so many ways to narrow a search if you really wanted to, and if you want to find even better ways to use google to its full potential, check this video out below.
 
-video by: TechGumbo
+#####video by: TechGumbo
 
 ### Conclusion
 

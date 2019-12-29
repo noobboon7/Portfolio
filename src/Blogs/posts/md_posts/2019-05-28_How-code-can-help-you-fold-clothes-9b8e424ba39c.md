@@ -6,7 +6,7 @@ date: "May 28, 2019"
 ---
 # How code can help you fold clothes
 
-I recently started looking into A.I and machine learning for a my own curiosity, but more so with the agenda to create a machine that…
+![Cloths folding machine](https://media.giphy.com/media/1nR6fu93A17vWZbO9c/giphy.gif)
 
 I recently started looking into A.I and machine learning for a my own curiosity, but more so with the agenda to create a machine that folds your laundry. Lucky for me it already exists. Yay!
 
@@ -32,8 +32,10 @@ The Laundroid home robot, was first introduced and demonstrated at the 2015 CEAT
 > An Artificial Neural Network (ANN) is an information processing paradigm that is inspired by the way biological nervous systems, such as the brain, process information. -[Christos Stergiou and Dimitrios Siganos](https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol4/cs11/report.html)
 
 ![A biological and an artificial neuron (via [https://www.quora.com/What-is-the-differences-between-artificial-neural-network-computer-science-and-biological-neural-network](https://www.quora.com/What-is-the-differences-between-artificial-neural-network-computer-science-and-biological-neural-network))](https://cdn-images-1.medium.com/max/600/1*SJPacPhP4KDEB1AdhOFy_Q.png)
-A biological and an artificial neuron (via [https://www.quora.com/What-is-the-differences-between-artificial-neural-network-computer-science-and-biological-neural-network](https://www.quora.com/What-is-the-differences-between-artificial-neural-network-computer-science-and-biological-neural-network))![[Deep Feed Foward Neural Network](https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464)](https://cdn-images-1.medium.com/max/600/1*Vyz8w8ZGiZCl17birZqIyw.png)
-[Deep Feed Foward Neural Network](https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464)
+#####[A biological and an artificial neuron](https://www.quora.com/What-is-the-differences-between-artificial-neural-network-computer-science-and-biological-neural-network](https://www.quora.com/What-is-the-differences-between-artificial-neural-network-computer-science-and-biological-neural-network))
+
+![[Deep Feed Foward Neural Network](https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464)](https://cdn-images-1.medium.com/max/600/1*Vyz8w8ZGiZCl17birZqIyw.png)
+#####[Deep Feed Foward Neural Network](https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464)
 
 We can know start to think about how these folding machines are working under the hood. The process of folding clothes is very similar to the way we humans fold clothes; we take an article of clothing we receive information through our optic nerves(eyes), that information then gets passed to our prefrontal cortex, which processes the information, and then gives instruction to you motor sensory to move your arms in a way that will fold the clothes. The way the folding machine does this is using cameras to scan an article of clothing, send to it neural networks via wifi, and then send instructions to the robotic arms in the machine, on how to fold that particular piece of clothing.
 

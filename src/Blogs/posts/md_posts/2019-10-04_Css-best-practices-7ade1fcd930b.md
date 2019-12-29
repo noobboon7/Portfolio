@@ -9,7 +9,7 @@ date: "October 4, 2019"
 This blog post is intended for people getting started with css, and explains a high level overview of css.
 
 ![CSS (Cascading style sheets)Logo](https://cdn-images-1.medium.com/max/800/0*v59dLJr-6p2LiPsG.jpg)
-CSS (Cascading style sheets)Logo
+#####CSS (Cascading style sheets)Logo
 
 #### **Introduction**
 
@@ -31,6 +31,7 @@ When a browser displays a document, it must combine the document’s content wit
 6.  The visual display of the page is shown on the screen.
 
 ### Three Pillars of writing good CSS & HTML
+.    .    .    
 
 #### Responsive Web Design
 

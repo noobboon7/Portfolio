@@ -23,8 +23,7 @@ const Blog = (props) => {
     <Layout>
       <Head pageTitle={frontmatter.title}/>
       <div className="article">
-
-      <div className="article__content" dangerouslySetInnerHTML={{__html: html}}></div>
+        <div className="article__content" dangerouslySetInnerHTML={{__html: html}}></div>
       </div>
 
     </Layout>
