@@ -1,6 +1,6 @@
 .layout { 
     display: grid;
-    grid-template-rows:  [head-start] minmax(min-content, max-content) [head-end body-start] 1fr [body-end footer-start] minmax(6rem, max-content)[footer-end];
+    grid-template-rows:  [head-start] minmax(7rem, min-content) [head-end body-start] 1fr [body-end footer-start] minmax(17rem, min-content)[footer-end];
 
 }
 

@@ -1,47 +1,86 @@
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1040;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  opacity: .5;
-}
-
-.modal-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1050;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  outline: 0;
-}
-
 .modal {
+
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+  }
+  // modal div
   z-index: 100;
-  background: white;
+  background: rgb(255, 252, 252);
+
+
+
   position: relative;
+
   margin: 1.75rem auto;
   border-radius: 3px;
-  max-width: 500px;
+  max-width: 70vw;
   padding: 2rem;
-}
 
-.modal-header {
-  display: flex;
-  justify-content: flex-end;
-}
+  color: black;
 
-.modal-close-button {
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1;
-  color: #000;
-  opacity: .3;
-  cursor: pointer;
-  border: none;
+  &__picture{
+    background-color: rgba(53, 53, 53, 0.03);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: .3rem;
+    height: 45vh;
+    width: 100%;
+
+    &--1{background-image:url(../assets/img/bb.png);}
+    
+    &--2{background-image:url(../assets/img/nexter.png);}
+    
+    &--3{background-image:url(../assets/img/under-construction.png);}
+  }
+
+  &__title {
+    font-size: 4.5rem;
+  }
+
+  &__sub-title {
+    font-size: 2rem;
+    color: gray;
+  }
+
+  &__about {
+    font-size: 1.8rem;
+  }
+  &__stat {
+    font-size: 1.5rem;
+    color: gray;
+  }
+  
+  &-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  &-close-button {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    opacity: .3;
+    cursor: pointer;
+    border: none;
+  }
 }

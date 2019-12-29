@@ -15,7 +15,7 @@ const Layout = ({children}) => {
     <div className="layout">
       <Header siteTitle={title}/>
       {children}
-      <Footer/>
+      <Footer siteTitle={title}/>
     </div>
   )
 }

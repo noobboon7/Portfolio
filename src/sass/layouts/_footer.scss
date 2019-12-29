@@ -1,1 +1,33 @@
-@import '../abstract/variables';
+.footer {
+  display: grid;
+  grid: 1fr / repeat(3, 1fr) ;
+  align-items: center;
+  justify-items: center;
+  background-color: black;
+  color: white;
+  
+  &__copyright {
+
+    &-span {
+      color: $color-grey-dark;
+    }
+
+    grid-column: 1/2;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  &__logo {
+    
+  }
+
+  &__medialinks {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+
+  &__links {
+    height: 100%;
+    width: 7rem;
+  }
+}

@@ -3,7 +3,7 @@ import Button from './button'
 import Modal from './modal'
 import useModal from '../hooks/useModal';
 
-const Card = ({name, num, stack, descrp, stat }) => {
+const Card = ({name, num, stack, descrp, sub, stat }) => {
   const {isShowing, toggle} = useModal();
 
   return(
@@ -33,7 +33,9 @@ const Card = ({name, num, stack, descrp, stat }) => {
         hide={toggle}
         projectName={name}
         descrp={descrp}
+        sub={sub}
         stat={stat}
+        num={num}
       />
     </div>
 
