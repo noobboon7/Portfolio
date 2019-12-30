@@ -1,0 +1,73 @@
+.about {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.836),
+    #224a53
+  );
+  background-size: cover;
+  color: black;
+  display: grid;
+  grid-template-rows: 20% 70vh;
+}
+.about__heading {
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+}
+.about__description {
+  grid-column: 1/-1;
+  display: grid;
+  grid: 80% 1fr / 35% 1fr;
+  padding: 0 1.5rem;
+  font-size: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+.about__description-photo {
+  grid-row: 1/2;
+  top: 5rem;
+  height: 100%;
+  width: 100%;
+  background-image: url(../assets/img/me.jpg);
+  background-size: cover;
+}
+.about__description-media {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: grid;
+  grid: 1fr / repeat(4, 25%);
+  gap: 1rem;
+  height: 2rem;
+  width: 12rem;
+  padding-bottom: 10rem;
+  padding-right: 2rem;
+}
+.about__description-p {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.hexa,
+.hexa div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+.hexa {
+  width: 325px;
+  height: 230px;
+}
+.hexa div {
+  width: 100%;
+  height: 100%;
+}
+.hexa {
+  transform: rotate(120deg);
+}
+.hex1 {
+  transform: rotate(-60deg);
+}
+.hex2 {
+  transform: rotate(-60deg);
+}

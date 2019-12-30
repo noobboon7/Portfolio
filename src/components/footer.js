@@ -10,7 +10,7 @@ const Footer = ({ siteTitle }) => (
         </div>
 
         <div className="footer__logo">
-            {siteTitle} logo
+            {siteTitle} 
         </div>
         
         <ul className="footer footer__medialinks">

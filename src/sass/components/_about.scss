@@ -1,16 +1,15 @@
 .about {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  grid-column: sidebar-start / full-end;
-  grid-row: 1/2;
-  background-image: url(../assets/img/sky.jpg);
+
+  // background-color: greenyellow;
+  background-image: linear-gradient(to bottom, 
+                                  rgba(255, 255, 255, 0.836), 
+                                  rgb(34, 74, 83));
   background-size: cover;
   color: black;
  
   // new grid in section 
   display: grid;
-  grid-template-rows: 10% repeat(3, 28%);
+  grid-template-rows: 20% 70vh;
   
   &__heading {
     grid-row: 1/2;
@@ -18,69 +17,8 @@
     align-self: center;
   }
   
-  &__badges {
-    grid-row: 2/3;
-    // new grid for badges
-    display: grid;
-    grid: 1fr / repeat(4, 1fr) ;
-    gap: 2rem; 
-    margin: 0 1rem;
-  }
-
-  &__badge {
-
-    &-container {
-      display: grid;
-      grid-template-rows: 55% 1fr 30%;
-      // width: 100%;
-      justify-items: center;
-      align-items: center;
-      box-shadow: 0px 0px 30px rgba(200,196,219,.3);
-      border-radius: 3px;
-
-    }
-
-    &-background-icon {
-      width: 0;
-      height: 0;
-      border: 11rem solid transparent;
-      border-bottom: 10rem solid $color-primary;
-      position: relative;
-      top: -11rem;
-      
-      &:after {
-        content: '';
-        position: absolute;
-        left: -11rem;
-        top: 10rem;
-        width: 0;
-        height: 0;
-        border: 11rem solid transparent;
-        border-top: 10rem solid $color-primary;
-      }
-    }
-
-    &-icon {
-      position: relative;
-      z-index: 3;
-      top: 5rem;
-      left: -5rem;
-    }
-
-    &-skill {
-      grid-row: 2/3;
-      font-size: 2.5rem;
-    }
-
-    &-description {
-      grid-row: 3/4;
-      font-size: 2rem;
-      padding-left: 2.5rem;
-    }
-  }
-
   &__description {
-    grid-row: 3/4;
+
     grid-column: 1/-1;
 
     display: grid;
@@ -98,6 +36,7 @@
       background-image: url(../assets/img/me.jpg);
       background-size: cover;
     }
+
     &-media {
       grid-column: 1/2;
       grid-row: 2/3;
@@ -107,7 +46,7 @@
       gap: 1rem;
       height: 2rem;
       width: 12rem;
-      padding-bottom: 7rem;
+      padding-bottom: 10rem;
       padding-right: 2rem;
     }
 
@@ -115,26 +54,9 @@
       grid-column: 2/3;
       grid-row: 1/2;
     }
+
   }
 
-.svg {
-    grid-column: 1/-1;
-    list-style: none;
-
-    display: grid;
-    grid: repeat(2, 1fr) / repeat(5, 1fr);
-    gap: 4rem;
-    align-items: center;
-    justify-items: center;
-    margin-top: 3rem;
-
-    font-size: 3rem;
-
-    &__icon {
-      height: 5rem;
-      width: 5rem;
-    }
-  }
 }
 
 .hexa, .hexa div {

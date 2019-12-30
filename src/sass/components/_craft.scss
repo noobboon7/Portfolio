@@ -1,0 +1,135 @@
+.craft {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+
+  background-image: linear-gradient(to bottom,
+                                   rgba(0,0,0, .8), 
+                                   rgba(187, 179, 179, 0.39), 
+                                   rgba(255, 255, 255, 0.75)), 
+                                   url(../assets/img/sky.jpg);
+  background-size: cover;
+  color: black;
+ 
+  // new grid in section 
+  display: grid;
+  grid-template-rows: 15% 40% 10% 1fr;
+  
+  &__heading {
+    color: white;
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: center;
+    
+  }
+  &__heading-2 {
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: center;
+  }
+
+  &__badges {
+    grid-row: 2/3;
+    // new grid for badges
+    display: grid;
+    grid: 1fr / repeat(4, 1fr) ;
+    gap: 2rem; 
+    margin: 0 1rem;
+  }
+
+  &__badge {
+
+    &-container {
+      display: grid;
+      grid-template-rows: 55% 1fr 30%;
+      // width: 100%;
+      justify-items: center;
+      align-items: center;
+      box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.2);
+      border-radius: 10rem;
+    }
+
+    &-background-icon {
+      width: 0;
+      height: 0;
+      border: 11rem solid transparent;
+      border-bottom: 10rem solid $color-primary;
+      position: relative;
+      top: -11rem;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        left: -11rem;
+        top: 10rem;
+        width: 0;
+        height: 0;
+        border: 11rem solid transparent;
+        border-top: 10rem solid $color-primary;
+      }
+    }
+
+    &-icon {
+      position: relative;
+      z-index: 3;
+      top: 5rem;
+      left: -5rem;
+    }
+
+    &-skill {
+      grid-row: 2/3;
+      font-size: 2.5rem;
+    }
+
+    &-description {
+      grid-row: 3/4;
+      font-size: 2rem;
+      padding-left: 2.5rem;
+    }
+  }
+  
+}
+.svg {
+  grid-row: 4/5;
+  grid-column: 1/-1;
+  list-style: none;
+
+  display: grid;
+  grid: repeat(2, 1fr) / repeat(5, 1fr);
+  gap: 4rem;
+  align-items: center;
+  justify-items: center;
+  margin-top: 3rem;
+
+  font-size: 3rem;
+
+  &__icon {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+.hexa, .hexa div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+.hexa {
+  width: 325px;
+  height: 230px;
+}
+.hexa div {
+  width: 100%;
+  height: 100%;
+}
+.hexa {
+  transform: rotate(120deg);
+}
+.hex1 {
+  transform: rotate(-60deg);
+}
+.hex2 {
+  transform: rotate(-60deg);
+}
