@@ -1,0 +1,57 @@
+.card {
+  position: relative;
+  width: 100%;
+  color: #000000;
+  background-blend-mode: screen;
+  transition: all 0.2s ease;
+}
+.card__picture {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.card__picture--1 {
+  background-image: url(../assets/img/bb.png);
+}
+.card__picture--2 {
+  background-image: url(../assets/img/nexter.png);
+}
+.card__picture--3 {
+  background-image: url(../assets/img/blub.jpg);
+}
+.card__details {
+  font-size: 2rem;
+  position: absolute;
+  left: 6rem;
+  top: 5rem;
+  opacity: 0;
+  z-index: 3;
+  transition: all 0.2s;
+}
+.card__details__heading-span {
+  font-size: 3rem;
+}
+.card__details__sub {
+  color: whitesmoke;
+}
+.card__btn {
+  opacity: 0;
+  position: absolute;
+  left: 10rem;
+  bottom: 6rem;
+}
+.card:hover {
+  box-shadow: 1.2rem 1.2rem 0.2rem 0.1rem rgba(0, 0, 255, 0.2);
+}
+.card:hover .card__picture {
+  opacity: 0;
+  transform: translateY(-3px);
+}
+.card:hover .card__details {
+  animation: moveInTop ease 0.7s;
+  opacity: 1;
+}
+.card:hover .card__btn {
+  animation: moveInBottom ease 0.7s;
+  opacity: 1;
+}

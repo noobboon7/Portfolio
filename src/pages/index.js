@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import AboutSection from "../components/aboutSection"
 import ProjectSection from "../components/projectSection"
 import CraftSection from "../components/craftSection"
+import Image from "../components/image"
 import "../sass/main.scss"
 
 
@@ -18,7 +19,7 @@ const IndexPage = () => {
       <SEO title="Home"/>
 
       <main id ="indexContainer" className="contanier">
-
+        <Image/>
         <section id="craftContainer" className="craft">
           <CraftSection/>
         </section>
