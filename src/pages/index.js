@@ -7,7 +7,6 @@ import SEO from "../components/seo"
 import AboutSection from "../components/aboutSection"
 import ProjectSection from "../components/projectSection"
 import CraftSection from "../components/craftSection"
-
 import "../sass/main.scss"
 
 

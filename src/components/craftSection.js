@@ -1,7 +1,7 @@
 import React from 'react'
 import Icon from './icon'
 
-
+console.log("Craft section loaded")
 const CraftSection = () => (
   <>
   <h2 className="craft__heading heading-1">Full Stack DeV</h2>

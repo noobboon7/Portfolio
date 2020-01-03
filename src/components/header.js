@@ -8,7 +8,7 @@ const Header = ({siteTitle}) => {
   
   return(
     <header className = "header">
-      <AniLink fade diruration={2} to="/" className="header__link">{siteTitle}</AniLink>
+      <AniLink fade  to="/" className="header__link">{siteTitle}</AniLink>
       
       <div className="pages">
       {/* <AniLink swipe direction="up" className="header header__link" to="/resume"> Resume </AniLink>
@@ -17,7 +17,7 @@ const Header = ({siteTitle}) => {
 
         <AniLink fade to="/splash" className="pages__link">Expore the moon</AniLink> 
 
-        <AniLink cover top="entry" className="pages__link" to="/blogs" duration={.5}bg="#723">blogs</AniLink>
+        <AniLink cover top="entry" className="pages__link" to="/blogs" duration={.5}bg="#777">blogs</AniLink>
       </div>
     </header>
   )
