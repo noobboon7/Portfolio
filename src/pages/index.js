@@ -7,29 +7,32 @@ import SEO from "../components/seo"
 import AboutSection from "../components/aboutSection"
 import ProjectSection from "../components/projectSection"
 import CraftSection from "../components/craftSection"
-import Image from "../components/image"
+
+import {useImgQ} from "../hooks/imgQueries"
+import Img from 'gatsby-image'
+
 import "../sass/main.scss"
 
 
 const IndexPage = () => {
-
+  const {me, sky, water} = useImgQ()
   return(
     <Layout>
       <Head pageTitle="Home"/>
       <SEO title="Home"/>
 
       <main id ="indexContainer" className="contanier">
-        <Image/>
         <section id="craftContainer" className="craft">
-          <CraftSection/>
+          <Img fluid={sky.childImageSharp.fluid} />
+          <CraftSection sky={sky}/>
         </section>
         
         <section id="aboutContainer" className="about">
-          <AboutSection/>
+          <AboutSection me={me}/>
         </section>
 
         <section id="portfolioContainer" className="portfolio">
-          <ProjectSection/>
+          <ProjectSection water={water}/>
         </section>
 
       </main>

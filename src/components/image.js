@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import {useImgQ} from "../hooks/imgQueries"
 import Img from "gatsby-image"
 
 /*
@@ -14,23 +14,11 @@ import Img from "gatsby-image"
  */
 
 const Image = () => {
-  // 1 needed to write the whole file name 
   // 2 now need to figure out how to optimize for scss files
-  // 3 make a hook component to query imgaes 
-  const data = useStaticQuery(graphql`
-    query {
-      me: file(relativePath: { eq: "assets/img/me.jpg" }) {
-        childImageSharp {
-          fluid{
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-  console.log(data)
 
-  return <Img fluid={data.me.childImageSharp.fluid} />
+  const {me, sky} = useImgQ()
+
+  return <Img fluid={sky.childImageSharp.fluid} />
 }
 
 export default Image

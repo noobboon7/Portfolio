@@ -1,8 +1,9 @@
 import React from 'react'
 import Icon from './icon'
+import Img from "gatsby-image"
 
 
-const AboutSection = () => (
+const AboutSection = ({me}) => (
   <>
     {/*Have backGround image of sky or video or animation */}
     
@@ -14,7 +15,7 @@ const AboutSection = () => (
         <div class="hex1">
           <div class="hex2">
             <div className="about__description-photo">
-              &nbsp;
+              <Img fluid={me.childImageSharp.fluid}/>
             </div>
           </div>
         </div>
