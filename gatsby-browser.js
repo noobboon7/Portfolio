@@ -1,4 +1,3 @@
-// import './src/sass/main.scss'
 /**
  * Implement Gatsby's Browser APIs in this file.
  *

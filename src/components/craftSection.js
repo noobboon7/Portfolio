@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 
 const CraftSection = ({sky}) => (
   <>
-  <Img fluid={sky.childImageSharp.fluid} />
+  <Img  className="craft craft__bg" fluid={sky.childImageSharp.fluid}/>
   <h2 className="craft__heading heading-1">Full Stack DeV</h2>
     <div className="craft__badges">
       <div className="craft__badge-container">
