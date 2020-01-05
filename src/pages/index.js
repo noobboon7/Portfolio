@@ -9,7 +9,7 @@ import ProjectSection from "../components/projectSection"
 import CraftSection from "../components/craftSection"
 
 import {useImgQ} from "../hooks/imgQueries"
-// import Img from 'gatsby-image'
+import Img from 'gatsby-image'
 
 
 import "../sass/main.scss"
@@ -24,17 +24,8 @@ const IndexPage = () => {
 
       <main id ="indexContainer" className="contanier">
         <section id="craftContainer" className="craft">
-          {/* <Img  style={{
-              height: `100vh`,
-              width: `100vw`,
-              backgroundColor: `transparent`,
-              backgroundSize: `cover`,
-              backgroundPosition: `center center`,
-              display: `flex`,
-              alignItems: `center`,
-          }}
-          fluid={sky.childImageSharp.fluid} /> */}
-          <CraftSection sky={sky}/>
+        <Img className="craft craft__bg" fluid={sky.childImageSharp.fluid}/>
+          <CraftSection />
         </section>
         
         <section id="aboutContainer" className="about">
@@ -42,7 +33,8 @@ const IndexPage = () => {
         </section>
 
         <section id="portfolioContainer" className="portfolio">
-          <ProjectSection water={water}/>
+          <Img className="portfolio portfolio__bg" fluid={water.childImageSharp.fluid}/>
+          <ProjectSection />
         </section>
 
       </main>

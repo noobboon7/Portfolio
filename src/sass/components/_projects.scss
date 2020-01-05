@@ -1,11 +1,24 @@
-.projects { 
+.portfolio{
+  position: relative;
+  background-image: linear-gradient(to bottom, rgb(34, 74, 83), rgba(34, 74, 83, 0.301));
 
-  background-image: linear-gradient(to bottom, rgb(34, 74, 83), rgba(34, 74, 83, 0.301)), url(../assets/img/water.jpg);
-  background-size: cover;
+  
+  &__bg {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-size: cover;
+    width: 100%;
+
+  }
+}
+.projects { 
 
   display: grid;
   grid: repeat(4, minmax(20rem, 1fr)) 6rem / minmax(6rem, 3%) repeat(7, 1fr) minmax(6rem, 3%);
   
+
   &__title {
     justify-self: center;
     align-self: center;

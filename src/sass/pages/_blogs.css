@@ -6,6 +6,15 @@
   background-image: url(../assets/img/plush.jpg);
   background-size: cover;
 }
+.blogs__bg {
+  background-size: cover;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
 .blogs__header {
   grid-column: 3/4;
   position: relative;

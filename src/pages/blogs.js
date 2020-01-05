@@ -2,19 +2,21 @@ import React from "react"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-
 import Head from '../components/head'
 import Layout from '../components/layout'
+import Img from 'gatsby-image'
 import { useBlogMD } from '../hooks/markdownData'
+import { useImgQ } from '../hooks/imgQueries'
 
 
 
 const BlogPage = () => {
   const blogs = useBlogMD()
-  
+  const {plush} = useImgQ()
   return (
     <Layout>
     <Head pageTitle="Blogs"/>
+    <Img className="blogs__bg" fluid={plush.childImageSharp.fluid} />
       <div className="blogs">
         <h1 className="blogs__header">Blogs:</h1>
         <ol className="blogs__posts">
