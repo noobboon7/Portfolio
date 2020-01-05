@@ -1,7 +1,6 @@
 .portfolio{
   position: relative;
   background-image: linear-gradient(to bottom, rgb(34, 74, 83), rgba(34, 74, 83, 0.301));
-
   
   &__bg {
     position: absolute !important;
@@ -18,7 +17,6 @@
   display: grid;
   grid: repeat(4, minmax(20rem, 1fr)) 6rem / minmax(6rem, 3%) repeat(7, 1fr) minmax(6rem, 3%);
   
-
   &__title {
     justify-self: center;
     align-self: center;
@@ -36,6 +34,6 @@
     grid-column: 2/9;
     grid-row: 2/5;
     display: grid;
-    grid: repeat(2, 1fr) / repeat(3, 1fr) ;     
+    grid: repeat(2, 1fr) / repeat(3, minmax(35rem, 1fr));     
   }
 }

@@ -1,7 +1,7 @@
 .header {
     
     display: grid;
-    grid: 1fr /  1fr 60% 1fr;
+    grid: 1fr /  1fr 55% 1fr;
     // working towards a sticky header 
     // position: fixed;
     background-color: black;
@@ -37,7 +37,7 @@
         
         &__link {
             text-decoration: none;
-
+            justify-self: center;
             translate: all .2s;
         }
         

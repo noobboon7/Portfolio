@@ -2,19 +2,19 @@
   grid-row: body-start / body-end ;
   display: grid;
   grid-template-rows: 100rem 80vh 1fr;
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(3rem, 1fr) [space-end center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
 }
 
 .craft {
-  grid-column: sidebar-start / full-end;
+  grid-column: 1 / -1;
   grid-row: 1/2;
 }
 
 .about {
-  grid-column: sidebar-start / full-end;
+  grid-column: 1 / -1;
   grid-row: 2/3;
 }
 .portfolio {
-  grid-column: sidebar-start / full-end;
+  grid-column: 1 / -1;
   grid-row: 3/4;
 }
