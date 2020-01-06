@@ -42,6 +42,14 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Source Sans Pro', 'sans-serif','Lora', 'serif', 'Proza Libre', ]
+        }
+      }
+    },
 
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
