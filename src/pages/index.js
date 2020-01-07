@@ -33,7 +33,7 @@ const IndexPage = () => {
         </section>
 
         <section id="portfolioContainer" className="portfolio">
-          <Img className="portfolio portfolio__bg" fluid={water.childImageSharp.fluid}/>
+          {/* <Img className="portfolio portfolio__bg" fluid={water.childImageSharp.fluid}/> */}
           <ProjectSection />
         </section>
 
