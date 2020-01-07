@@ -158,11 +158,12 @@
     &-skill {
       grid-row: 2/3;
       font-size: 2.5rem;
-
+      font-family: $font-Secondary;
     }
 
     &-description {
       grid-row: 3/4;
+      font-family: $font-third;
       font-size: 2rem;
       padding-left: 2.5rem;
     }

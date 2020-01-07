@@ -5,23 +5,9 @@
   background-blend-mode: screen;
   transition: all .2s ease;
 
-  &__picture{
-    background-size: cover;
-
+  &__picture {
     height: 100%;
     width: 100%;
-
-    &--1{
-      background-image:url(../assets/img/bb.png);
-    }
-    
-    &--2{
-      background-image:url(../assets/img/nexter.png);
-    }
-    
-    &--3{
-      background-image:url(../assets/img/blub.jpg);
-    }
   }
   
   &__details {
@@ -38,6 +24,7 @@
     }
     
     &__sub {
+      font-family: $font-Secondary;
       color: whitesmoke;
     }
     
