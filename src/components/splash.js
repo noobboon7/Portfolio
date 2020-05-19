@@ -46,7 +46,7 @@ const Stars = () => {
     )
   }
 
-const Splash = () => {
+const Splash = useMemo(() => {
   // lazy loading lead to a slower transitons 
 // const Moon = React.lazy(()=> import('./3dMoon'))
 
@@ -63,6 +63,6 @@ const Splash = () => {
             <Stars/>
         </Canvas>
     )
-}
+},[])
 
 export default Splash;
