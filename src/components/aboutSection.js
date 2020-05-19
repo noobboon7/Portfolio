@@ -21,7 +21,6 @@ const AboutSection = ({me}) => (
         </div>
       </div>
       <div className="about__description-media">
-        {/* fix media links  */}
         <a href="https://medium.com/@jvr572" rel="noopener noreferrer" target="_blank">
           <Icon viewBox="0 0 1024 1024" fill="rgb(0, 0, 0)" width="100%" height="100%" icon="Medium"/>
         </a>
@@ -37,7 +36,7 @@ const AboutSection = ({me}) => (
       </div> 
 
       <p className="about__description-p">
-        Hello! My name is Jerry Velazquez and I'm a full stack developer. I started making full stack web applications at my time in flatiron school and use a vary of technologies. Before this working as a developer I was working in live audio engineer for venues in NYC... I made my living that way as well as other jobs. Now, I'm making appliction for social good and projects that I find interesting. 
+        Yellooo! My name is Jerry Velazquez and I'm a full stack developer. I started making full stack web applications at my time in flatiron school and use a varity of technologies. Before this working as a developer I was working in live audio engineer for venues in NYC... I made my living that way as well as other jobs. Now, I'm making appliction for social good and projects that I find interesting. 
       </p>
     </div>
   </>

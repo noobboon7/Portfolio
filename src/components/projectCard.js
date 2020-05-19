@@ -2,21 +2,20 @@ import React from 'react'
 import Button from './button'
 import Modal from './modal'
 import useModal from '../hooks/useModal';
+import Img from 'gatsby-image'
 
 
-const Card = ({name, num, stack, descrp, sub, stat }) => {
+const Card = ({name, stack, descrp, sub, stat, img }) => {
   const {isShowing, toggle} = useModal();
 
   return(
   <div className="card">
 
-    <div className={"card__picture card__picture--" + num}>
-      &nbsp;
-    </div>
+    <Img className="card__picture" fluid={img}/>
 
     <div className="card__details card__details--animated">
 
-      <span className={"details__heading-span details__heading-span--" + num}>
+      <span className="details__heading-span ">
         {name}
       </span>
 
@@ -27,8 +26,7 @@ const Card = ({name, num, stack, descrp, sub, stat }) => {
     </div>
 
     <div className="card__btn">
-    {/* <button className="button-default" onClick={toggle}>Show Modal</button> */}
-      <Button projectName={name} clsNum={num} togl={toggle} />
+      <Button projectName={name} togl={toggle} />
       <Modal
         isShowing={isShowing}
         hide={toggle}
@@ -36,7 +34,7 @@ const Card = ({name, num, stack, descrp, sub, stat }) => {
         descrp={descrp}
         sub={sub}
         stat={stat}
-        num={num}
+        img={img}
       />
     </div>
 

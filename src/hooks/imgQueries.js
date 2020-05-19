@@ -24,7 +24,7 @@ export const useImgQ = () => {
         }
       }
     }
-    nexter: file(relativePath: { eq: "assets/img/nexter.jpg" }) {
+    nexter: file(relativePath: { eq: "assets/img/nexter.png" }) {
       childImageSharp {
         fluid{
           ...GatsbyImageSharpFluid
@@ -64,3 +64,5 @@ export const useImgQ = () => {
 
   return imgs
 }
+
+export default useImgQ
