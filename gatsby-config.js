@@ -1,9 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `JerryVee`,
-    description: `This is my portfolio. I was determinded to learn a new "stack" so I decide ventur into technologies I wanted to learn. One thing lead to another and now I'm building a gatsby site. This is a display of my work I've done through my new journey as a web developer.`,
+    description: `Hello worlds;
+    This is my portfolio. 
+    I decide venture newish technologies... 
+    Projects I've done throughout my new journey as a web developer.`,
     author: `Jerry Velazquez`,
-    headline: `express the inexpressable`,
+    headline: `express the inexpressible`,
     logo: `./src/assets/img/logo.png`,
     me: `./src/assets/img/me.jpg`,
   },
@@ -43,14 +46,19 @@ module.exports = {
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-offline`,
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['Source Sans Pro', 'sans-serif','Lora', 'serif', 'Proza Libre', ]
-        }
-      }
+          families: [
+            "Source Sans Pro",
+            "sans-serif",
+            "Lora",
+            "serif",
+            "Proza Libre",
+          ],
+        },
+      },
     },
-
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
