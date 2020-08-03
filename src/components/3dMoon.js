@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 
-const Moon = () => {
+const Moon = useMemo(() => {
     const [model, setModel] = useState()
 
     useEffect(() => {
         new GLTFLoader().load('/scene.gltf', setModel)
 
-    },[setModel])
+    },[model])
 
 
     return model ? <mesh scale={[0.2,0.2,0.2]} position={[0,0,0]} >
@@ -18,6 +18,6 @@ const Moon = () => {
                     </mesh> : null
 
 
-}
+}, [])
 
 export default Moon
